@@ -1,5 +1,5 @@
 # Sprint02
-Reposiótio para execução da sprint2 - 1º semestre de ADS - SPTech
+Repositório para execução da sprint 2 - 1º semestre de ADS - SPTech
 📚 Sobre o nosso projeto! Um sistema IOT empregado com uma solução de temperatura e umidade para auxiliar no plantio de cafe.
 
 A equipe utiliza da metodologia SCRUM para organizar suas atividades.
