@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap'); 
+/* 'Ubuntu' */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    font-family: 'Ubuntu';
+}
+body{
+    background-color: #f5f5f5;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 0;
+    border-bottom: 1.5px solid #E6BC16;
+    background-color: #123142;  
+}
+
+nav .logo{
+    width: 30%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row;x     */
+    /* background-color: #383838; */
+}
+
+nav .logo img{
+    width: 260px;
+}
+
+nav .bar{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav .bar ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav .bar ul li{
+    margin: 0 20px;
+    transition: all 0.5s;
+}
+
+/* nav .bar ul li:hover{
+    border-bottom: 2px solid #e6bc16;
+} */
+
+nav .bar ul li a{
+    text-decoration: none;
+    color: #e6bc16;
+    transition: all 0.5s;
+}
+
+nav .bar ul li a:hover{
+    color: #f5f5f5;
+}
+
+nav .bar .cadastro{
+    background-color: transparent;
+    padding: 15px;
+    border: 1px solid #e6bc16;
+    transition: all 0.8s;
+    border-radius: 10px;
+}
+nav .bar .cadastro:hover{
+    background-color: #e6bc16;
+    color: #f5f5f5;
+    border-radius: 50px;
+}
+
+section{
+    width: 100%;
+    height: 500px;
+    /* margin: 0; */
+    background-color: rgb(171, 187, 186);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+section .container{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.principal .container .texto {
+    width: 30%;
+    /* background-color: #fff; */
+}
+.principal .texto p{
+    font-size: 20px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    text-align: justify;
+    /* background-color: #123142; */
+}
