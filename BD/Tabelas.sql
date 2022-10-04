@@ -2,7 +2,7 @@ create database Capulus;
 
 use Capulus;
 
-create table Cliente(
+create table Cliente (
 	idCliente int primary key auto_increment,
     Nome varchar(45),
     Sobrenome varchar(45),
@@ -13,8 +13,7 @@ create table Cliente(
     dtNascimento date
 );
 
-create table En
-reco (
+create table Endereco (
 idEndereco int primary key,
 CEP char(8),
 Logradouro varchar(45),
@@ -38,5 +37,6 @@ idSensor int primary key,
 nome varchar(45),
 Temperatura decimal(4,2),
 Umidade decimal(4,2),
-DataHora datetime
+DataHora datetime,
+Localizacao varchar (45)
 );
