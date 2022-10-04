@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+/* 'Ubuntu' */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* 'Pavifico' */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-family: 'Ubuntu';
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* NavBar */
+nav {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 0;
+    border-bottom: 1.5px solid #E6BC16;
+    background-color: #123142;
+}
+
+nav .logo {
+    width: 30%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row;x     */
+    /* background-color: #383838; */
+}
+
+nav .logo img {
+    width: 260px;
+    transition: all 1s;
+}
+
+nav .logo img:hover{
+    transform: scale(1.10);
+}
+
+nav .bar {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav .bar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav .bar ul li {
+    margin: 0 20px;
+    transition: all 0.5s;
+}
+
+nav .bar ul li a {
+    text-decoration: none;
+    color: #e6bc16;
+    transition: all 0.5s;
+}
+
+nav .bar ul li a:hover {
+    color: #f5f5f5;
+}
+
+nav .bar .cadastro {
+    background-color: transparent;
+    padding: 15px;
+    border: 1px solid #e6bc16;
+    transition: all 0.8s;
+    border-radius: 10px;
+}
+
+nav .bar .cadastro:hover {
+    background-color: #e6bc16;
+    color: #123142;
+    border-radius: 50px;
+}
+
+
+/* Sections */
+
+section {
+    width: 100%;
+    height: 550px;
+    /* margin: 0; */
+    background-color: rgb(171, 187, 186);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+
+.principal .container {
+    width: 90%;
+    height: 470px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 1s;
+
+    background-image: url('./../img/fundo6.jpg  ');
+    background-size: cover;
+    background-position: center;
+
+    /* border: 1px solid blue; */
+}
+
+.principal .container:hover{
+    transform: scale(1.05);
+}
+
+.principal .conteudo {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    /* border: 1px yellow solid; */
+}
+
+.principal .container .texto {
+    width: 60%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    /* border: 1px solid red; */
+}
+
+.principal .texto h2 {
+    font-family: 'Ubuntu';
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+    transition: all 0.5s;
+}
+
+.principal .texto h2:hover {
+    text-shadow: 4px 4px 5px #e6bc16;
+}
+
+.principal .texto p {
+    font-size: 20px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    text-align: justify;
+    color: white;
+    margin: 20px 0;
+}
+
+.principal button {
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px #e6bc16 solid;
+    background-color: #123142;
+    outline: 1px white;
+    /* margin: 30px 0; */
+
+    /* Transition (quando acontecer o hover ele vai acontecer com o tempo escolhido no transition, dando uma impressão de profissional) */
+    transition: all 0.7s;
+
+    /* texto dentro do botão */
+    color: #e6bc16;
+    font-weight: 700;
+}
+
+/* Hover (Quando passar o cursor do mouse) */
+.principal button:hover {
+    transform: scale(1.10);
+}
+
+
+/* Section Secundária */
+.secundaria {
+    height: 568px;
+    background-color: #123142;
+    padding: 70px 0 10px;
+    justify-content: space-evenly;
+}
+
+.secundaria .secao {
+    width: 25%;
+    height: 300px;
+    background-color: transparent;
+    border-radius: 0px 0px 90px 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.secundaria .mission, .vision, .values {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border-style: groove;
+    position: absolute;
+    top: 780px;
+    background-color: transparent;
+
+    transition: all 1s;
+}
+
+.secundaria .secao:hover, .mission:hover, .vision:hover, .values:hover{
+    transform: translateY(-50px);
+}
+
+.secundaria .texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.secundaria .secao h3 {
+    font-size: 40px;
+    font-family: 'Pacifico';
+    font-weight: 100;
+    color: #e6bc16;
+    text-align: center;
+}
+
+.secundaria .texto p {
+    width: 60%;
+    text-align: justify;
+}

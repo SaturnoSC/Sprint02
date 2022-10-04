@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #f1f1ff;
+    font-family: monospace;
+    }
+
+    .header {
+    padding: 15px;
+    background-color: white
+
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h1 {
+        color: #3b657a;
+        font-weight: 800;
+    }
+
+    ul {
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    li {
+        color: #3b657a;
+    }
+
+    .banner {
+        background-image: url("./imagens/banner-cafezins.jpg");
+        padding: 100px 0 ;
+        height: 260px;
+        width: 1000px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .banner .container {
+        height: 260px;
+        width: 800px;
+        justify-content: center;
+    }
+    .banner p {
+        width: 50px;
+        color: #f1f1ff;
+        font-size: 30px;
+    }
+
+    .social {
+        margin: 50px 0;
+    }
+
+    .social .caixas, .caixa {
+        display: flex;
+    }
+
+    .caixa {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 15px;
+    }
+    
+    .caixa h4 {
+        margin: 15px;
+        color: #3b657a;
+    }
+
+    .caixa p {
+        text-align: center;
+        color: black;
+    }
+
+    .caixa img {
+        width: 100px;
+    }
+
+    .footer {
+        padding: 45px 0;
+        background-color: #3b657a;
+    }
+
+    .footer .container {
+        justify-content: center;
+    }
+        
+    .footer p {
+        color: #f1f1ff;
+    }
+    
+    li a {
+        color:#3b657a;
+        text-decoration: none;
+        cursor: pointer;
+    }
