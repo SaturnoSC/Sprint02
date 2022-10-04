@@ -1,11 +1,14 @@
-# Sprint02
-Repositório para execução da sprint 2 - 1º semestre de ADS - SPTech
-📚 Sobre o nosso projeto! Um sistema IOT empregado com uma solução de temperatura e umidade para auxiliar no plantio de cafe.
+[![All Contributors](https://img.shields.io/badge/contributors_sprint_2-6-orange.svg?style=flat-square)](#contributors)
+[![TRELLO FERRAMENTA](https://img.shields.io/badge/-trello-blue)](https://trello.com/b/1c55RnRI/sprint2)
+# NOSSO REPOSITORIO DA SPRINT 2 
+📚  ***Sobre o nosso projeto!***
+Um sistema IOT empregado com uma solução de temperatura e umidade para auxiliar no plantio de cafe.
 
-A equipe utiliza da metodologia SCRUM para organizar suas atividades.
-nossas regras 🧑‍💼
-
-Afim de criar o melhor ambiente de trabalho para a nossa equipe, fizemos algumas regras que devem ser seguidas até o fim do projeto.
+ *A equipe utiliza da metodologia SCRUM para organizar suas atividades.*
+ 
+ ## nossas regras 🧑‍💼
+ 
+***Afim de criar o melhor ambiente de trabalho para a nossa equipe, fizemos algumas regras que devem ser seguidas até o fim do projeto.***
 
     01. Levantar a mão quando quiser ter a voz ouvida pelo grupo;
 
@@ -29,6 +32,6 @@ Afim de criar o melhor ambiente de trabalho para a nossa equipe, fizemos algumas
 
     11. Terça-feira (presencial): Revisão e preparo para apresentação da Sprint Review no dia seguinte na aula de P.I;
 
-    12. Quarta-feira (remoto): Alinhamento do que foi orientado pela professora e execução das tarefas;
+   
 
-    13. Sexta-feira (remoto): Organização e execução das demais tarefas do projeto;
+    12. Sexta-feira (remoto): Organização e execução das demais tarefas do projeto;
