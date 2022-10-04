@@ -14,19 +14,34 @@ a {
 }
 
 body {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
+}
+
+section {
+    width: 100%;
+    height: 615px;
+    /* margin: 0; */
+    /* background-color: rgb(171, 187, 186); */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; */
+    padding-bottom: 10px;
+    background-image: url('./../img/fundo6.jpg  ');
+    background-size: cover;
+    background-position: center;
 }
 
 /* NavBar */
 nav {
     width: 100%;
-    height: 90px;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border: 0;
     border-bottom: 1.5px solid #E6BC16;
-    background-color: #123142;
+    background-color: #123142e1;
 }
 
 nav .logo {
@@ -69,6 +84,7 @@ nav .bar ul li {
 nav .bar ul li a {
     text-decoration: none;
     color: #e6bc16;
+    font-weight: 600;
     transition: all 0.5s;
 }
 
@@ -76,12 +92,19 @@ nav .bar ul li a:hover {
     color: #f5f5f5;
 }
 
+nav .bar .entrar{
+    padding-bottom: 5px;
+    border-bottom: 2px #e6bc16 solid;
+    margin-left: 50px;
+    }
+
 nav .bar .cadastro {
     background-color: transparent;
     padding: 15px;
     border: 1px solid #e6bc16;
     transition: all 0.8s;
     border-radius: 10px;
+    margin-right: 20px;
 }
 
 nav .bar .cadastro:hover {
@@ -93,18 +116,6 @@ nav .bar .cadastro:hover {
 
 /* Sections */
 
-section {
-    width: 100%;
-    height: 550px;
-    /* margin: 0; */
-    background-color: rgb(171, 187, 186);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding-bottom: 10px;
-}
-
 .principal .container {
     width: 90%;
     height: 470px;
@@ -113,16 +124,9 @@ section {
     align-items: center;
     border-radius: 10px;
     transition: all 1s;
-
-    background-image: url('./../img/fundo6.jpg  ');
-    background-size: cover;
-    background-position: center;
+    margin: 0 auto;
 
     /* border: 1px solid blue; */
-}
-
-.principal .container:hover{
-    transform: scale(1.05);
 }
 
 .principal .conteudo {
@@ -198,12 +202,15 @@ section {
     background-color: #123142;
     padding: 70px 0 10px;
     justify-content: space-evenly;
+
+    background-image: url("./../img/13087.jpg");
+    /* background-size: cover; */
 }
 
 .secundaria .secao {
     width: 25%;
     height: 300px;
-    background-color: transparent;
+    background-color: #fff;
     border-radius: 0px 0px 90px 90px;
     display: flex;
     justify-content: center;
@@ -221,12 +228,12 @@ section {
     border-style: groove;
     position: absolute;
     top: 780px;
-    background-color: transparent;
+    background-color: #e6bc16;
 
     transition: all 1s;
 }
 
-.secundaria .secao:hover, .mission:hover, .vision:hover, .values:hover{
+.secundaria .secao:hover .mission:hover, .vision:hover, .values:hover{
     transform: translateY(-50px);
 }
 
@@ -241,11 +248,14 @@ section {
     font-size: 40px;
     font-family: 'Pacifico';
     font-weight: 100;
-    color: #e6bc16;
+    color: #123142;
     text-align: center;
+    border-bottom: #e6bc16 2px solid;
+    margin-bottom: 30px;
 }
 
 .secundaria .texto p {
     width: 60%;
-    text-align: justify;
+    text-align: center;
+    font-family: 'Ubuntu';
 }
