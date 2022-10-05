@@ -41,6 +41,11 @@ nav {
     align-items: center;
     border: 0;
     border-bottom: 1.5px solid #E6BC16;
+    background-color: #12314215;
+    transition: all ease-in 1s;
+}
+
+nav:hover{
     background-color: #123142e1;
 }
 
@@ -193,69 +198,4 @@ nav .bar .cadastro:hover {
 /* Hover (Quando passar o cursor do mouse) */
 .principal button:hover {
     transform: scale(1.10);
-}
-
-
-/* Section Secundária */
-.secundaria {
-    height: 568px;
-    background-color: #123142;
-    padding: 70px 0 10px;
-    justify-content: space-evenly;
-
-    background-image: url("./../img/13087.jpg");
-    /* background-size: cover; */
-}
-
-.secundaria .secao {
-    width: 25%;
-    height: 300px;
-    background-color: #fff;
-    border-radius: 0px 0px 90px 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.secundaria .mission, .vision, .values {
-    width: 130px;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    border-style: groove;
-    position: absolute;
-    top: 780px;
-    background-color: #e6bc16;
-
-    transition: all 1s;
-}
-
-.secundaria .secao:hover .mission:hover, .vision:hover, .values:hover{
-    transform: translateY(-50px);
-}
-
-.secundaria .texto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.secundaria .secao h3 {
-    font-size: 40px;
-    font-family: 'Pacifico';
-    font-weight: 100;
-    color: #123142;
-    text-align: center;
-    border-bottom: #e6bc16 2px solid;
-    margin-bottom: 30px;
-}
-
-.secundaria .texto p {
-    width: 60%;
-    text-align: center;
-    font-family: 'Ubuntu';
 }
