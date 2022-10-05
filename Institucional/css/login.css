@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+/* 'Ubuntu' */
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+ .banner .container {
+    display: flex;
+    justify-content: center;
+
+}
+
+ .banner .container .caixa-formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: #123142e1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #FFFFFF;
+    margin: 50px;
+    padding: 50px;
+}
+
+.banner .container .caixa-formulario h1, label {
+    color: whitesmoke;
+    font-family: 'Ubuntu';
+}
+
+.campo {
+    padding: 15px 0;
+}
+
+.banner .container .caixa-formulario input {
+    border-radius: 6px;
+    border: none;
+    padding: 6px;
+    width: 190px;
+    transition: all 0.7s;
+    outline: 0;
+}
+
+.banner .container .caixa-formulario input:focus {
+    scale: 1.06;
+    border: 2px solid #e6bc16;
+}
+
+.banner .container .caixa-formulario button {
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+}
