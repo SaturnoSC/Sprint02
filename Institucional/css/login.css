@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 /* 'Ubuntu' */
 
+section{
+    height: 49.9vmax;
+}
+
 .banner {
     display: flex;
     justify-content: center;
@@ -18,7 +22,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    border: 2px solid #FFFFFF;
+    border: 2px solid #e6bc16;
     margin: 50px;
     padding: 50px;
 }
@@ -39,6 +43,13 @@
     width: 190px;
     transition: all 0.7s;
     outline: 0;
+    background-color: transparent;
+    color: rgba(245, 245, 245, 0.493);
+    border-bottom: 2px solid #e6bc16;
+}
+
+.banner .container .caixa-formulario .caixa-form .campo input::placeholder{
+    color: rgba(245, 245, 245, 0.493);
 }
 
 .banner .container .caixa-formulario input:focus {
@@ -47,7 +58,22 @@
 }
 
 .banner .container .caixa-formulario button {
-    padding: 6px;
-    border-radius: 6px;
+    /* margin: 0; */
+    color: #e6bc16;
+    background-color: transparent;
+    padding: 9px 16px;
     border: none;
+    border-radius: 5px;
+    top: 500px;
+    border: 2px solid #e6bc16;
+    width: 110px;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+.banner .container .caixa-formulario button:hover {
+    border-radius: 20px;
+    scale: 1.1;
+    color: #123142;
+    background-color: #e6bc16;
 }

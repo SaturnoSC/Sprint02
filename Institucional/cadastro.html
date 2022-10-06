@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="icon" href="./img/AAA.png">
     <title>Cadastre-se</title>
 </head>
@@ -14,43 +15,73 @@
 
         <nav>
             <div class="logo">
-                <img src="./img/logo6.png">
+              <a href="./index.html"><img src="./img/logoSite.png"></a> 
             </div>
             <div class="bar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="">Sobre Nós</a></li>
-                    <li><a href="">Simulador financeiro</a></li>
-                <li><a href="login.html">Entrar</a></li>
-                <li><a href="registro.html" class="cadastro">Cadastre-se</a></li>
-            </ul>
-        </div>
-    </nav>
+                    <li><a href="#sobreNos">Sobre Nós</a></li>
+                    <li><a href="#mvv">Propósito</a></li>
+                    <li><a href="./simulador.html">Simulador financeiro</a></li>
+                </ul>
+            </div>
+            <div class="bar2">
+                <ul>
+                    <li><a href="./login.html" class="entrar">Entrar</a></li>
+                    <li class="aqui" style="border: none;"><a href="./cadastro.html" class="cadastro">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </nav>
 
     <div class="banner">
         <div class="container">
             <div class="caixa-formulario">
-                <h1>Bem-vindo!</h1>
-                <div class="campo">
-                    <label for="nome">Nome</label>
-                    <input type="nome" id="nome" placeholder="Seu nome">
-                </div>
-                <div class="campo">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="email@email.com">
-                </div>
-                <div class="campo">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" placeholder="************">
-                </div>
-                <div class="campo">
-                    <label for="password">Confirmação da Senha</label>
-                    <input type="password" id="password" placeholder="************">
+                <h1>Bem-vindo ao SaturnoSC!</h1>
+                
+                <div class="caixa-form">
+                    <div class="caixa">
+                    <div class="campo">
+                        <label for="nome">Nome</label> <br>
+                        <input type="nome" id="nome" placeholder="Seu nome">
+                    </div>
+                    <div class="campo">
+                        <label for="Data de Nascimento">Data de Nascimento</label> <br>
+                        <input type="date" id="dtnasc">
+                    </div>
+                    <div class="campo">
+                        <label for="CPF">Cpf</label> <br>
+                        <input id="Cpf" placeholder="Seu CPF">
+                    </div>
+                    <div class="campo">
+                        <label for="CNPJ">Cnpj</label> <br>
+                        <input id="Cnpj" placeholder="Seu CNPJ">
+                    </div>
                 </div>
                 
-                <button>Enviar</button>
+                <div class="caixa2">
+
+                    <div class="campo">
+                        <label for="email">E-mail</label> <br>
+                        <input type="email" id="email" placeholder="email@email.com">
+                    </div>
+                    <div class="campo">
+                        <label for="telefone">Telefone</label> <br>
+                        <input type="tel" id="Telefone" placeholder="Seu telefone">
+                    </div>
+                    <div class="campo">
+                        <label for="password">Senha</label> <br>
+                        <input type="password" id="password" placeholder="************">
+                    </div>
+                    <div class="campo">
+                        <label for="password">Confirme a Senha</label> <br>
+                        <input type="password" id="password" placeholder="************">
+                    </div>
+                </div>
             </div>
             
+            <br><br>
+                <button>Enviar</button>
+            </div>     
         </div>
     </div>
     </section>

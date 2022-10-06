@@ -114,7 +114,7 @@ nav .bar2 .entrar:hover{
 nav .bar2 .cadastro {
     background-color: transparent;
     padding: 15px;
-    border: 1px solid #e6bc16;
+    border: 2px solid #e6bc16;
     transition: all 1s;
     border-radius: 10px;
     /* margin-right: 20px; */
