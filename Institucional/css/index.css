@@ -47,6 +47,11 @@ body {
     font-weight: 600;
     font-size: 40px;
     font-family: 'Cinzel';
+    transition: all 0.8s;
+}
+
+.container1 .titulo h2:hover{
+    transform: scale(1.2);
 }
 
 .container1 .containerzinho {
@@ -113,7 +118,7 @@ body {
 
 .container2 {
     width: 100%;
-    height: 624px;
+    height: 567px;
     background-image: url("./../img/10302279_4247150.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,13 +131,13 @@ body {
 
 .container2 .espaco {
     width: 50%;
-    height: 600px;
+    height: 500px;
     /* border: 1px solid red; */
 }
 
 .container2 .mvv {
     width: 47%;
-    height: 624px;
+    height: 567px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -143,7 +148,7 @@ body {
 
 .container2 .mvv .div1 {
     width: 87.4%;
-    height: 208px;
+    height: 189px;
     margin-right: 35px;
     display: flex;
     justify-content: center;
@@ -167,12 +172,12 @@ body {
 
 .container2 .mvv .div2{
     width: 41%;
-    height: 208px;
+    height: 189px;
     position: absolute;
     background-color: #e6bc16;
     transition: all 1.4s;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
     border-bottom: 0.5px #123142 solid;
@@ -180,8 +185,9 @@ body {
 }
 
 .container2 .mvv .div2:hover{
-    opacity: 0.00001;
-    transform: scale(1.05);
+    opacity: 0.000001;
+    /* background-color: transparent; */
+    transform: scale(1.06);
 }
 
 .container2 .mvv .div2 h2{
@@ -192,31 +198,23 @@ body {
     font-family: 'Pacifico';
 }
 
-/* .mvv .div1 {
-    width: 25%;
-    height: 300px;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+
+
+/* Footer */
+footer{
+    width: 100%;
+    height: 200px;
+}
+footer .footer1{
+    width: 100%;
+    height: 150px;
+    background-color: #123142;
 }
 
-.mvv .div2 {
-    width: 25%;
-    height: 300px;
-    background-color: #E6BC16;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    transition: all 1s;
+footer .footer2{
+    width: 100%;
+    height: 50px;
+    background-color: #091921;
 }
-
-.mvv .div1:hover {
-    z-index: 1;
-}
-
-.mvv .div2:hover {
-    opacity: 0.1;
-    z-index: -1;
-} */

@@ -37,7 +37,7 @@ nav {
     width: 100%;
     height: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border: 0;
     border-bottom: 1.5px solid #E6BC16;
@@ -50,7 +50,7 @@ nav:hover{
 }
 
 nav .logo {
-    width: 30%;
+    width: 27%;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -69,55 +69,75 @@ nav .logo img:hover{
 }
 
 nav .bar {
-    width: 70%;
+    width: 44%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
-
-nav .bar ul {
+nav .bar2{
+    width: 27%;
+    display: flex;
+    justify-content: center;
+}
+nav .bar ul, .bar2 ul {
     display: flex;
     flex-direction: row;
     list-style: none;
 }
 
-nav .bar ul li {
+nav .bar ul li, .bar2 ul li {
     margin: 0 20px;
     transition: all 0.5s;
 }
 
-nav .bar ul li a {
+nav .bar ul li a, .bar2 ul li a {
     text-decoration: none;
     color: #e6bc16;
     font-weight: 600;
     transition: all 0.5s;
 }
 
-nav .bar ul li a:hover {
+nav .bar ul li a:hover, .bar2 ul li a:hover {
     color: #f5f5f5;
 }
 
-nav .bar .entrar{
+nav .bar2 .entrar{
     padding-bottom: 5px;
     border-bottom: 2px #e6bc16 solid;
-    margin-left: 50px;
-    }
+    /* margin-left: 50px; */
+}
 
-nav .bar .cadastro {
+nav .bar2 .entrar:hover{
+    border-bottom: 2px #f5f5f5 solid;
+}
+
+nav .bar2 .cadastro {
     background-color: transparent;
     padding: 15px;
     border: 1px solid #e6bc16;
-    transition: all 0.8s;
+    transition: all 1s;
     border-radius: 10px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
-nav .bar .cadastro:hover {
+nav .bar2 .cadastro:hover {
     background-color: #e6bc16;
     color: #123142;
     border-radius: 50px;
 }
 
+nav .bar .aqui{
+    border-bottom: 2px #e6bc16 solid;
+    animation: aqui 1s infinite alternate;
+}
+
+@keyframes aqui {
+    from{
+        transform: translateY(0);
+    } to {
+        transform: translateY(-5px);
+    }
+}
 
 /* Sections */
 
@@ -166,6 +186,7 @@ nav .bar .cadastro:hover {
 }
 
 .principal .texto h2:hover {
+    transform: scale(1.15);
     text-shadow: 4px 4px 5px #e6bc16;
 }
 
@@ -197,5 +218,5 @@ nav .bar .cadastro:hover {
 
 /* Hover (Quando passar o cursor do mouse) */
 .principal button:hover {
-    transform: scale(1.10);
+    transform: scale(1.1);
 }
