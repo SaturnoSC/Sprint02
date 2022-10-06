@@ -103,7 +103,7 @@ nav .bar ul li a:hover, .bar2 ul li a:hover {
 
 nav .bar2 .entrar{
     padding-bottom: 5px;
-    border-bottom: 2px #e6bc16 solid;
+    /* border-bottom: 2px #e6bc16 solid; */
     /* margin-left: 50px; */
 }
 
@@ -126,7 +126,7 @@ nav .bar2 .cadastro:hover {
     border-radius: 50px;
 }
 
-nav .bar .aqui{
+nav .bar .aqui, .bar2 .aqui{
     border-bottom: 2px #e6bc16 solid;
     animation: aqui 1s infinite alternate;
 }
