@@ -24,13 +24,16 @@ Estado varchar(45)
 );
 
 create table Plantacao (
-idPlantacao int,
+idPlantacao int primary key,
 fkCliente int,
+foreign key (fkCliente) references Cliente (idCliente),
 Nome varchar(45),
 Hectares int,
-Tipo varchar(45),
-primary key (fkCliente, idPlantacao) 
+Tipo varchar(45)
 );
+
+drop table Plantacao;
+drop table Cliente, endereco;
 
 create table Sensor (
 idSensor int primary key,
