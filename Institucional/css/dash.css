@@ -4,17 +4,18 @@
 }
 
 body {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row; */
     background-color: #123142;
 }
 
 nav {
-    width: 14.5%;
+    width: 15%;
     height: 47.1vmax;
     background-color: #123142;
+    float: left;
     /* border-right: 1px solid #e6bc16; */
 
 }
@@ -53,7 +54,7 @@ nav .bar .espaco {
     height: 200px;
 }
 
-nav .bar .botoes{
+nav .bar .botoes {
     width: 100%;
     height: 200px;
     display: flex;
@@ -66,49 +67,147 @@ nav .bar .botoes{
 nav .bar .botoes button {
     width: 71%;
     height: 35px;
-    
+
 
 }
 
-section {
-    width: 85%;
-    height: 47.1vmax;
-    background-color: #383838;
-    border-radius: 50px 0 0 50px;
+nav .saida {
+    width: 100%;
+    height: 100px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-
-    
-}
-
-section .container1 {
-    width: 35%;
-    height: 550px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    border-radius: 50px;
-    background-color: aquamarine;
-    
     /* border: 1px solid red; */
 }
 
-section .container2 {
-    width: 65%;
+nav .saida a {
+    color: #f5f5f5;
+    transition: all 2s;
+}
+
+nav .saida a:hover {
+    color: #e6bc16;
+    transform: rotate(-360deg) scale(2);
+}
+
+
+
+/* Section */
+section {
+    width: 85%;
+    height: 48.1vmax;
+    background-color: #383838;
+    border-radius: 50px 0 0 50px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+
+}
+
+section .caixa {
+    width: 99.8%;
+    height: 28vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid blue;
+}
+
+section .caixa .container1 {
+    width: 50%;
+    height: 28vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    border-radius: 50px;
+    /* border: 1px solid aquamarine; */
+
+    /* border: 1px solid red; */
+}
+
+/* Div da esquerda, principal */
+section .caixa .container1 .contPrincipal {
+    width: 60%;
+    height: 26vmax;
+    border-radius: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+    border: 1px #e6bc16 solid;
+}
+
+/* "Mãe" das caixas laterais */
+section .caixa .container1 .contPrincipal .caixinha {
+    width: 34%;
+    height: 26vmax;
+
+    border: 1px red solid;
+}
+
+/* Três caixas laterias */
+section .caixa .container1 .contPrincipal .cont1 {
+    width: 100%;
+    height: 8.55vmax;
+    border-radius: 10px;
+
+    border: 1px blueviolet solid;
+}
+
+section .caixa .container1 .contPrincipal .cont2 {
+    width: 100%;
+    height: 8.55vmax;
+    border-radius: 10px;
+
+    border: 1px dimgray solid;
+}
+
+section .caixa .container1 .contPrincipal .cont3 {
+    width: 100%;
+    height: 8.55vmax;
+    border-radius: 10px;
+
+    border: 1px royalblue solid;
+}
+
+
+
+
+section .caixa .container1 .contPrincipal .cont4 {
+    width: 66%;
+    height: 22vmax;
+    float: right;
+
+    border: 1px #f5f5f5 dashed;
+}
+
+
+
+
+
+
+
+
+
+section .caixa .container2 {
+    width: 50%;
     height: 350px;
     display: flex;
     align-items: center;
     justify-content: end;
     flex-direction: column;
-    background-color: red
+
+    /* border: 1px solid red */
 }
 
 section .container3 {
     width: 100%;
-    height: 200px;
-    background-color: #e6bc16;
+    height: 20.1vmax;
 
+    /* background-color: #e6bc16; */
 }
