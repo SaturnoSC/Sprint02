@@ -7,21 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Saturn SC</title>
     <link rel="stylesheet" href="./css/dash.css">
+    <link rel="icon" href="./img/logoIcon.png">
 </head>
 
 <body>
     <nav>
         <div class="logo">
-            <div class="test"></div>
+            <a href="./index.html"><img src="./img/logoIcon.png" alt="" width="110"></a>
         </div>
         <div class="bar">
             <div class="espaco">
-
+                <div class="foto"></div>
+                <h2>Augusto César Rocha</h2>
+                <p><span>ID:</span> &ensp; 1513</p>
             </div>
             <div class="botoes">
-                <button> botao 1</button>
-                <button> botao 2</button>
-                <button> botao 3</button>
+                <a href="./dashboard.html"><button class="aqui"> <img src="./img/monitor.png" alt=""
+                            width="30">Dashboard</button></a>
+                <a href=""><button onclick="mudar()"> botão 2</button></a>
+                <a href=""><button> botão 3</button></a>
+                <a href=""><button> botão 4</button></a>
             </div>
         </div>
         <div class="saida">
@@ -29,7 +34,11 @@
         </div>
     </nav>
 
-    <section>
+
+
+    <div class="testeAgora" id="2"></div>
+
+    <section id="1">
         <div class="caixa">
             <div class="container1">
                 <div class="contPrincipal">
@@ -56,8 +65,28 @@
         <div class="container3"></div>
 
     </section>
-
-
 </body>
 
 </html>
+<script>
+    function mudar() {
+        var num = 1
+
+        if (num == 1) {
+
+            document.getElementById("2").style.display = "flex"
+            document.getElementById("1").style.display = "none"
+
+            num = 0
+
+        } else if (num == 0) {
+
+            document.getElementById("1").style.display = "flex"
+            document.getElementById("2").style.display = "none"
+
+            num = 1
+
+        }
+    }
+
+</script>
