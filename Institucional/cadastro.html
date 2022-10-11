@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,80 +11,72 @@
     <link rel="icon" href="./img/AAA.png">
     <title>Cadastre-se</title>
 </head>
+
 <body>
     <section>
+        <div class="banner">
+            <div class="container">
+                <div class="caixa-formulario">
+                    <div class="logo">
+                        <a href="./index.html"><img src="./img/logoIcon.png" width="100"></a>
+                    </div>
+                    <h1>Bem-vindo ao SaturnoSC!</h1>
 
-        <nav>
-            <div class="logo">
-              <a href="./index.html"><img src="./img/logoSite.png"></a> 
-            </div>
-            <div class="bar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="./index.html#sobreNos">Sobre Nós</a></li>
-                    <li><a href="./index.html#mvv">Propósito</a></li>
-                    <li><a href="./simulador.html">Simulador financeiro</a></li>
-                </ul>
-            </div>
-            <div class="bar2">
-                <ul>
-                    <li><a href="./login.html" class="entrar">Entrar</a></li>
-                    <li class="aqui" style="border: none;"><a href="./cadastro.html" class="cadastro">Cadastre-se</a></li>
-                </ul>
-            </div>
-        </nav>
+                    <div class="caixa-form">
+                        <div class="caixa">
+                            <div class="campo">
+                                <label for="nome">Nome</label> <br>
+                                <input type="nome" id="nome" placeholder="Seu nome">
+                            </div>
+                            <div class="campo">
+                                <label for="Data de Nascimento">Data de Nascimento</label> <br>
+                                <input type="date" id="dtnasc">
+                            </div>
+                            <div class="campo">
+                                <label for="CPF">Cpf</label> <br>
+                                <input id="Cpf" placeholder="Seu CPF">
+                            </div>
+                            <div class="campo">
+                                <label for="CNPJ">Cnpj</label> <br>
+                                <input id="Cnpj" placeholder="Seu CNPJ">
+                            </div>
+                        </div>
 
-    <div class="banner">
-        <div class="container">
-            <div class="caixa-formulario">
-                <h1>Bem-vindo ao SaturnoSC!</h1>
-                
-                <div class="caixa-form">
-                    <div class="caixa">
-                    <div class="campo">
-                        <label for="nome">Nome</label> <br>
-                        <input type="nome" id="nome" placeholder="Seu nome">
+                        <div class="caixa2">
+
+                            <div class="campo">
+                                <label for="email">E-mail</label> <br>
+                                <input type="email" id="email" placeholder="email@email.com">
+                            </div>
+                            <div class="campo">
+                                <label for="telefone">Telefone</label> <br>
+                                <input type="tel" id="Telefone" placeholder="Seu telefone">
+                            </div>
+                            <div class="campo">
+                                <label for="password">Senha</label> <br>
+                                <input type="password" id="password" placeholder="************">
+                            </div>
+                            <div class="campo">
+                                <label for="password">Confirme a Senha</label> <br>
+                                <input type="password" id="password" placeholder="************">
+                            </div>
+                        </div>
                     </div>
-                    <div class="campo">
-                        <label for="Data de Nascimento">Data de Nascimento</label> <br>
-                        <input type="date" id="dtnasc">
-                    </div>
-                    <div class="campo">
-                        <label for="CPF">Cpf</label> <br>
-                        <input id="Cpf" placeholder="Seu CPF">
-                    </div>
-                    <div class="campo">
-                        <label for="CNPJ">Cnpj</label> <br>
-                        <input id="Cnpj" placeholder="Seu CNPJ">
-                    </div>
+
+                    <br><br>
+                    <button>Enviar</button>
+                    <h5>Já tem uma conta? <a href="./login.html">Entrar</a></h5>
                 </div>
-                
-                <div class="caixa2">
 
-                    <div class="campo">
-                        <label for="email">E-mail</label> <br>
-                        <input type="email" id="email" placeholder="email@email.com">
-                    </div>
-                    <div class="campo">
-                        <label for="telefone">Telefone</label> <br>
-                        <input type="tel" id="Telefone" placeholder="Seu telefone">
-                    </div>
-                    <div class="campo">
-                        <label for="password">Senha</label> <br>
-                        <input type="password" id="password" placeholder="************">
-                    </div>
-                    <div class="campo">
-                        <label for="password">Confirme a Senha</label> <br>
-                        <input type="password" id="password" placeholder="************">
-                    </div>
-                </div>
+                <!-- <div class="minicontainer">
+                    <h4>Já tem uma conta?</h4>
+                    <div class="barra"><a href="./login.html" class="azinho2"><button>Entre na sua conta
+                                aqui.</button></a></div>
+                </div> -->
+
             </div>
-            
-            <br><br>
-                <button>Enviar</button>
-            </div>     
         </div>
-    </div>
     </section>
 </body>
+
 </html>
