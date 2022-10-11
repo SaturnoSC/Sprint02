@@ -2,20 +2,22 @@
 /* 'Ubuntu' */
 
 section{
-    height: 49.9vmax;
+    /* height: 49.9vmax; */
 }
 
 .banner {
     display: flex;
     justify-content: center;
 }
- .banner .container {
+
+.banner .container {
     display: flex;
     justify-content: center;
 
 }
 
- .banner .container .caixa-formulario {
+.banner .container .caixa-formulario {
+    height: 23vmax;
     display: flex;
     flex-direction: column;
     background-color: #123142e1;
@@ -23,7 +25,7 @@ section{
     align-items: center;
     border-radius: 10px;
     border: 2px solid #e6bc16;
-    margin: 50px;
+    margin: 40px 0 0;
     padding: 50px;
 }
 
