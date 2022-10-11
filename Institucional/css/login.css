@@ -5,12 +5,8 @@
     font-family: 'Ubuntu';
 }
 section{
-<<<<<<< HEAD
     height: 46.8vmax;
     align-items: center;
-=======
-    /* height: 49.9vmax; */
->>>>>>> c2eea50ac9c3f0d02169c6a21dcc0d8982ffab5f
 }
 
 .banner {
@@ -20,10 +16,6 @@ section{
     padding: 80px;
     float: right;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> c2eea50ac9c3f0d02169c6a21dcc0d8982ffab5f
 .banner .container {
     display: flex;
     justify-content: center;
@@ -33,10 +25,6 @@ section{
 }
 
 .banner .container .caixa-formulario {
-<<<<<<< HEAD
-=======
-    height: 23vmax;
->>>>>>> c2eea50ac9c3f0d02169c6a21dcc0d8982ffab5f
     display: flex;
     flex-direction: column;
     background-color: #123142e1;
@@ -44,7 +32,6 @@ section{
     align-items: center;
     border-radius: 10px;
     border: 2px solid #e6bc16;
-<<<<<<< HEAD
     margin: 50px 50px 15px 50px;
     padding: 10px 50px 40px;
     width: 350px;
@@ -59,10 +46,6 @@ section{
     /* position: absolute; */
 
     /* border: 1px solid red; */
-    
-    margin: 40px 0 0;
-    padding: 50px;
->>>>>>> c2eea50ac9c3f0d02169c6a21dcc0d8982ffab5f
 }
 
 .banner .container .caixa-formulario h1, label {
