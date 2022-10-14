@@ -27,45 +27,43 @@ nav {
 
 }
 
-/* nav:hover{
-    left: 0;
-} */
-
 .teste {
-    width: 100px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
+    transition: all 0.8s;
     position: absolute;
-    right: 1250px;
-    top: 10px;
-
+    right: 1315px;
+    top: 20px;
     z-index: 1;
-    /* border: 1px solid darkred;     */
-}
-
-.teste a {
-    font-size: 40px;
-    background-image: url("./../img/icons8-cardápio-80.png");
+    background-image: url("./../img/icons8-cardápio-240.png ");
     background-size: cover;
     background-position: center;
-}
 
+    /* border: 1px solid darkred; */
+}
 
 nav .logo {
     width: 100%;
-    height: 100px;
-    /* background-color: aliceblue; */
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     /* border: 1px blue solid; */
 }
+nav .logo img{
+    opacity: 0.7;
+    transition: all 0.7s;
+}
+nav .logo img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
 
 nav .bar {
     width: 100%;
     height: 400px;
-    /* background-color: brown; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -89,9 +87,6 @@ nav .bar .espaco .foto {
     height: 85px;
     border-radius: 100%;
     background-color: #e6bc16af;
-    /* background-image: url("./../img/10302279_4247150.jpg"); */
-    /* background-size: cover;
-    background-position: left; */
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
@@ -140,9 +135,7 @@ nav .bar .botoes a {
     display: flex;
     justify-content: start;
     align-items: center;
-
     background-color: transparent;
-    /* border: 0; */
     color: #e6bc16;
     font-family: 'Ubuntu';
     text-decoration: none;
@@ -164,23 +157,26 @@ nav .bar .botoes .aqui {
 
 nav .saida {
     width: 100%;
-    height: 90px;
+    height: 70px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
     /* border: 1px solid red; */
 }
 
 nav .saida a {
     color: #f5f5f5;
-    transition: all 2s;
-    /* border: 1px solid blue; */
+    transition: all 0.8s;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     font-size: 15px;
+}
+
+nav .saida a:hover{
+    color: #f5f5f55f;
 }
 
 nav .saida span {
@@ -192,10 +188,6 @@ nav .saida span {
     /* border: 1px red solid; */
 }
 
-/* nav .saida a:hover {
-    color: #e6bc16;
-    transform: rotate(-360deg) scale(2);
-} */
 
 
 
@@ -207,10 +199,10 @@ nav .saida span {
 
 /* #section-one */
 section {
-    width: 98%;
+    width: 95%;
     height: 45.73vmax;
     background-color: #383838;
-    border-radius: 50px 0 0 50px;
+    border-radius: 25px 0 0 25px;
     float: right;
     align-items: center;
     justify-content: space-between;
@@ -220,10 +212,6 @@ section {
     z-index: -1;
     transition: all 1s;
 }
-
-/* section:hover{
-    width: 98%;
-} */
 
 section .caixa {
     width: 99.8%;
@@ -241,9 +229,7 @@ section .caixa .container1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-direction: column; */
     border-radius: 50px;
-    /* border: 1px solid aquamarine; */
 
     /* border: 1px solid red; */
 }
@@ -301,8 +287,6 @@ section .caixa .container1 .contPrincipal .cont4 {
     /* border: 1px #f5f5f5 dashed; */
 }
 
-
-
 section .caixa .container2 {
     width: 50%;
     height: 350px;
@@ -315,15 +299,39 @@ section .caixa .container2 {
 }
 
 
-/* Div escondida do botão 2 (Analytics) */
-.testeAgora {
+/* Div escondida do botão 2, Analytics */
+.segundaSection {
     width: 85%;
     height: 45.73vmax;
-    background-color: #f5f5f5;
-    border-radius: 50px 0 0 50px;
+    background-color: #124312;
+    border-radius: 25px 0 0 25px;
     float: right;
     display: none;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    transition: all 1s;
+}
+
+
+
+/* Div escondida do botão 3, Mural de Avisos */
+.terceiraSection {
+    width: 85%;
+    height: 45.73vmax;
+    background-color: #383838;
+    border-radius: 25px 0 0 25px;
+    float: right;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: all 1s;
+}
+
+.terceiraSection .primeiraParte{
+    width: 70%;
+    height: 180px;
+    border: 1px solid green;
+    transition: all 1s;
 }
