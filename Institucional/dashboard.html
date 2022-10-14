@@ -27,10 +27,8 @@
 </head>
 
 <body>
-    <div class="teste">
-    <a onclick="navbar()">&ensp;</a>
-    </div>
-    
+    <div class="teste" id="menu-bar" onclick="navbar()"></div>
+
     <nav id="nav">
         <div class="logo">
             <a href="./index.html"><img src="./img/logoIcon.png" alt="" width="110"></a>
@@ -45,15 +43,15 @@
             </div>
             <div class="botoes">
                 <!-- BOTÃO 1 -->
-                <a href="./dashboard.html" id="botao-1" class="aqui"><span class="material-symbols-outlined">
+                <a id="botao-1" class="aqui" onclick="dashboard()"><span class="material-symbols-outlined">
                         monitoring
                     </span> Dashboard</a>
 
                 <!-- BOTÃO 2 -->
-                <a onclick="mudar()" id="botao-2"><span class="material-symbols-outlined">
+                <a onclick="analytics()" id="botao-2"><span class="material-symbols-outlined">
                         query_stats
                     </span> Analytics</a>
-                <a href=""> <span class="material-symbols-outlined">
+                <a onclick="mural()" id="botao-3"> <span class="material-symbols-outlined">
                         push_pin
                     </span>
                     Mural de <br> avisos</a>
@@ -97,42 +95,114 @@
 
     </section>
 
-    <section class="testeAgora" id="section-two" style="display: none;"></section>
+    <section class="segundaSection" id="section-two"></section>
+
+    <section class="terceiraSection" id="section-thre">
+        <div class="primeiraParte" id="primeira-parte">
+
+        </div>
+
+    </section>
 
 </body>
 
 </html>
 <script>
-    
-    function mudar() {
-        
-        var sectionOne = document.getElementById("section-one")
-        var sectionTwo = document.getElementById("section-two")
 
-        var botao1 = document.getElementById("botao-1")
-        var botao2 = document.getElementById("botao-2")
+    var sectionOne = document.getElementById("section-one")
+    var sectionTwo = document.getElementById("section-two")
+    var sectionThre = document.getElementById("section-thre")
 
-        sectionOne.style.display = "none"
-        sectionTwo.style.display = "flex"
-        botao1.style.backgroundColor = "#123142"
-        botao2.style.backgroundColor = "#ffffff21"
+    var botao1 = document.getElementById("botao-1")
+    var botao2 = document.getElementById("botao-2")
+    var botao3 = document.getElementById("botao-3")
+
+
+    function dashboard() {
+        sectionOne.style.display = "flex"
+        sectionTwo.style.display = "none"
+        sectionThre.style.display = "none"
+
+        botao1.style.backgroundColor = "#ffffff21"
+        botao1.style.opacity = "0.8"
+
+        botao2.style.opacity = "1"
+        botao2.style.backgroundColor = "#123142"
+
+        botao3.style.opacity = "1"
+        botao3.style.backgroundColor = "#123142"
+        numSection = 1
     }
 
-var numBar = 1
+    function analytics() {
+        sectionOne.style.display = "none"
+        sectionTwo.style.display = "flex"
+        sectionThre.style.display = "none"
 
+        botao1.style.backgroundColor = "#123142"
+        botao1.style.opacity = "1"
+
+        botao2.style.backgroundColor = "#ffffff21"
+        botao2.style.opacity = "0.8"
+
+        botao3.style.opacity = "1"
+        botao3.style.backgroundColor = "#123142"
+
+        numSection = 0
+    }
+
+    function mural() {
+        sectionOne.style.display = "none"
+        sectionTwo.style.display = "none"
+        sectionThre.style.display = "flex"
+
+        botao1.style.opacity = "1"
+        botao1.style.backgroundColor = "#123142"
+
+        botao2.style.opacity = "1"
+        botao2.style.backgroundColor = "#123142"
+
+        botao3.style.backgroundColor = "#ffffff21"
+        botao3.style.opacity = "0.8"
+
+        numSection = 1
+    }
+
+
+    var numBar = 1
     function navbar() {
         var navBar = document.getElementById("nav")
         var sectionOne = document.getElementById("section-one")
-
-        
+        var menuBar = document.getElementById("menu-bar")
+        var primeiraParte = document.getElementById("primeira-parte")
 
         if (numBar == 1) {
-            navBar.style.left="0"
-            sectionOne.style.width="85%"
+            navBar.style.left = "0"
+            sectionOne.style.width = "85%"
+            sectionTwo.style.width = "85%"
+            sectionThre.style.width = "85%"
+            
+            sectionOne.style.borderRadius="0"
+            sectionTwo.style.borderRadius="0"
+            sectionThre.style.borderRadius="0"
+
+            primeiraParte.style.width="70%"
+
+            menuBar.style.right = "1095px"
             numBar = 0
         } else if (numBar == 0) {
-            navBar.style.left="-14%"
-            sectionOne.style.width="98%"
+            navBar.style.left = "-14%"
+            sectionOne.style.width = "95%"
+            sectionTwo.style.width = "95%"
+            sectionThre.style.width = "95%"
+
+            sectionOne.style.borderRadius="25px 0 0 25px"
+            sectionTwo.style.borderRadius="25px 0 0 25px"
+            sectionThre.style.borderRadius="25px 0 0 25px"
+
+            primeiraParte.style.width="90%"
+
+            menuBar.style.right = "1315px"
             numBar = 1
         }
     }
