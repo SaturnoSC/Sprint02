@@ -8,37 +8,68 @@
     <title>Dashboard - Saturn SC</title>
     <link rel="stylesheet" href="./css/dash.css">
     <link rel="icon" href="./img/logoIcon.png">
+
+    <!-- Links dos icones -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
-    <nav>
+    <div class="teste">
+    <a onclick="navbar()">&ensp;</a>
+    </div>
+    
+    <nav id="nav">
         <div class="logo">
             <a href="./index.html"><img src="./img/logoIcon.png" alt="" width="110"></a>
         </div>
         <div class="bar">
             <div class="espaco">
-                <div class="foto"></div>
-                <h2>Augusto César Rocha</h2>
-                <p><span>ID:</span> &ensp; 1513</p>
+                <div class="foto"><span class="material-symbols-outlined">
+                        account_circle
+                    </span></div>
+                <h2>Administrador</h2>
+                <p><span>ID:</span> &ensp; 001</p>
             </div>
             <div class="botoes">
-                <a href="./dashboard.html"><button class="aqui"> <img src="./img/monitor.png" alt=""
-                            width="30">Dashboard</button></a>
-                <a href=""><button onclick="mudar()"> botão 2</button></a>
-                <a href=""><button> botão 3</button></a>
-                <a href=""><button> botão 4</button></a>
+                <!-- BOTÃO 1 -->
+                <a href="./dashboard.html" id="botao-1" class="aqui"><span class="material-symbols-outlined">
+                        monitoring
+                    </span> Dashboard</a>
+
+                <!-- BOTÃO 2 -->
+                <a onclick="mudar()" id="botao-2"><span class="material-symbols-outlined">
+                        query_stats
+                    </span> Analytics</a>
+                <a href=""> <span class="material-symbols-outlined">
+                        push_pin
+                    </span>
+                    Mural de <br> avisos</a>
+                <!-- <a href=""> botão 4</a> -->
             </div>
         </div>
         <div class="saida">
-            <a href="./login.html">Log Out</a>
+
+            <a href="./login.html"> <span class="material-symbols-outlined">
+                    logout
+                </span> Log Out</a>
         </div>
     </nav>
 
 
-
-    <div class="testeAgora" id="2"></div>
-
-    <section id="1">
+    <section id="section-one">
         <div class="caixa">
             <div class="container1">
                 <div class="contPrincipal">
@@ -62,30 +93,47 @@
             <div class="container2"></div>
         </div>
 
-        <div class="container3"></div>
+        <!-- <div class="container3"></div> -->
 
     </section>
+
+    <section class="testeAgora" id="section-two" style="display: none;"></section>
+
 </body>
 
 </html>
 <script>
+    
     function mudar() {
-        var num = 1
+        
+        var sectionOne = document.getElementById("section-one")
+        var sectionTwo = document.getElementById("section-two")
 
-        if (num == 1) {
+        var botao1 = document.getElementById("botao-1")
+        var botao2 = document.getElementById("botao-2")
 
-            document.getElementById("2").style.display = "flex"
-            document.getElementById("1").style.display = "none"
+        sectionOne.style.display = "none"
+        sectionTwo.style.display = "flex"
+        botao1.style.backgroundColor = "#123142"
+        botao2.style.backgroundColor = "#ffffff21"
+    }
 
-            num = 0
+var numBar = 1
 
-        } else if (num == 0) {
+    function navbar() {
+        var navBar = document.getElementById("nav")
+        var sectionOne = document.getElementById("section-one")
 
-            document.getElementById("1").style.display = "flex"
-            document.getElementById("2").style.display = "none"
+        
 
-            num = 1
-
+        if (numBar == 1) {
+            navBar.style.left="0"
+            sectionOne.style.width="85%"
+            numBar = 0
+        } else if (numBar == 0) {
+            navBar.style.left="-14%"
+            sectionOne.style.width="98%"
+            numBar = 1
         }
     }
 
