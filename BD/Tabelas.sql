@@ -28,9 +28,13 @@ idPlantacao int primary key,
 fkCliente int,
 foreign key (fkCliente) references Cliente (idCliente),
 Nome varchar(45),
-Hectares int,
-Tipo varchar(45)
+Metragem int,
+Tipo varchar(45),
+fkSensor int,
+foreign key (fkSensor) references Sensor (idSensor)
 );
+
+drop table Plantacao;
 
 create table Sensor (
 idSensor int primary key,
@@ -51,8 +55,8 @@ INSERT INTO Endereco VALUES
 (2, '02992100', 'Rua', '5702', 'Jardim Luz', 'Embuguaçu', 'São Paulo');
 
 INSERT INTO Plantacao VALUES
-(1, 1, 'Recanto do Aroma', 5, 'Arábica'),
-(2, 2, 'Plantação Café Zé', 10, 'Robusta');
+(1, 1, 'Recanto do Aroma', 5000, 'Arábica', 1),
+(2, 2, 'Plantação Café Zé', 1000, 'Robusta');
 
 INSERT INTO Sensor VALUES
 (1, 'A-01', '19', '55', '2022-10-19 09:50:17', 'Setor1'),
