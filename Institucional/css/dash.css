@@ -16,21 +16,50 @@ body {
 
 nav {
     width: 15%;
-    height: 47.1vmax;
+    height: 45.73vmax;
     background-color: #123142;
     float: left;
+    position: relative;
+    left: -14%;
+
+    transition: all 1s;
     /* border-right: 1px solid #e6bc16; */
 
 }
 
+/* nav:hover{
+    left: 0;
+} */
+
+.teste {
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 1250px;
+    top: 10px;
+
+    z-index: 1;
+    /* border: 1px solid darkred;     */
+}
+
+.teste a {
+    font-size: 40px;
+    background-image: url("./../img/icons8-cardápio-80.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
 nav .logo {
     width: 100%;
-    height: 150px;
+    height: 100px;
     /* background-color: aliceblue; */
     display: flex;
     align-items: center;
     justify-content: center;
 
+    /* border: 1px blue solid; */
 }
 
 nav .bar {
@@ -51,17 +80,27 @@ nav .bar .espaco {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    /* border: 1px pink solid; */
 }
 
 nav .bar .espaco .foto {
     width: 85px;
     height: 85px;
     border-radius: 100%;
-    background-color: #e6bc16;
-    background-image: url("./../img/10302279_4247150.jpg");
-    background-size: cover;
-    background-position: left;
+    background-color: #e6bc16af;
+    /* background-image: url("./../img/10302279_4247150.jpg"); */
+    /* background-size: cover;
+    background-position: left; */
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .bar .espaco .foto span {
+    font-size: 6.5em;
+    font-weight: 100;
 }
 
 nav .bar .espaco h2 {
@@ -71,13 +110,15 @@ nav .bar .espaco h2 {
     color: #f5f5f5;
     text-align: center;
 }
-nav .bar .espaco p{
+
+nav .bar .espaco p {
     font-size: 15px;
     font-family: 'Ubuntu';
     color: #f5f5f5af;
     font-weight: 200;
 }
-nav .bar .espaco span{
+
+nav .bar .espaco span {
     font-weight: 700;
 }
 
@@ -90,68 +131,71 @@ nav .bar .botoes {
     justify-content: space-evenly;
     flex-direction: column;
 
+    /* border: 1px green solid; */
 }
 
-nav .bar .botoes a{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-family: 'Ubuntu';
-}
-
-nav .bar .botoes a button {
-    width: 80%;
+nav .bar .botoes a {
+    width: 73%;
     height: 3vmax;
-    background-color: transparent;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
-    border: 0;
+
+    background-color: transparent;
+    /* border: 0; */
     color: #e6bc16;
     font-family: 'Ubuntu';
+    text-decoration: none;
     border-radius: 20px;
+    padding-left: 30px;
 }
 
-nav .bar .botoes  button:hover{
+nav .bar .botoes a span {
+    margin-right: 10px;
+}
+
+nav .bar .botoes a:hover {
     cursor: pointer;
 }
 
-nav .bar .botoes .aqui{
-    background-color: rgba(255, 255, 255, 0.13);
+nav .bar .botoes .aqui {
+    background-color: #ffffff21;
 }
 
 nav .saida {
     width: 100%;
-    height: 100px;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
+
     /* border: 1px solid red; */
 }
 
 nav .saida a {
     color: #f5f5f5;
     transition: all 2s;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-nav .saida a:hover {
+nav .saida span {
+    color: #f5f5f5;
+    font-weight: 100;
+    margin-right: 5px;
+    font-size: 17px;
+
+    /* border: 1px red solid; */
+}
+
+/* nav .saida a:hover {
     color: #e6bc16;
     transform: rotate(-360deg) scale(2);
-}
-
-.testeAgora{
-    width: 85%;
-    height: 48.1vmax;
-    background-color: #f5f5f5;
-    border-radius: 50px 0 0 50px;
-    float: right;
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-}
+} */
 
 
 
@@ -161,27 +205,25 @@ nav .saida a:hover {
 
 
 
-
-
-
-
-
-
-
-/* Section */
+/* #section-one */
 section {
-    width: 85%;
-    height: 48.1vmax;
+    width: 98%;
+    height: 45.73vmax;
     background-color: #383838;
     border-radius: 50px 0 0 50px;
     float: right;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-
-
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    transition: all 1s;
 }
+
+/* section:hover{
+    width: 98%;
+} */
 
 section .caixa {
     width: 99.8%;
@@ -190,7 +232,7 @@ section .caixa {
     justify-content: center;
     align-items: center;
 
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 section .caixa .container1 {
@@ -215,7 +257,7 @@ section .caixa .container1 .contPrincipal {
     /* justify-content: center; */
     align-items: center;
 
-    border: 1px #e6bc16 solid;
+    /* border: 1px #e6bc16 solid; */
 }
 
 /* "Mãe" das caixas laterais */
@@ -223,7 +265,7 @@ section .caixa .container1 .contPrincipal .caixinha {
     width: 34%;
     height: 26vmax;
 
-    border: 1px red solid;
+    /* border: 1px red solid; */
 }
 
 /* Três caixas laterias */
@@ -232,7 +274,7 @@ section .caixa .container1 .contPrincipal .cont1 {
     height: 8.55vmax;
     border-radius: 10px;
 
-    border: 1px blueviolet solid;
+    /* border: 1px blueviolet solid; */
 }
 
 section .caixa .container1 .contPrincipal .cont2 {
@@ -240,7 +282,7 @@ section .caixa .container1 .contPrincipal .cont2 {
     height: 8.55vmax;
     border-radius: 10px;
 
-    border: 1px dimgray solid;
+    /* border: 1px dimgray solid; */
 }
 
 section .caixa .container1 .contPrincipal .cont3 {
@@ -248,25 +290,16 @@ section .caixa .container1 .contPrincipal .cont3 {
     height: 8.55vmax;
     border-radius: 10px;
 
-    border: 1px royalblue solid;
+    /* border: 1px royalblue solid; */
 }
-
-
-
 
 section .caixa .container1 .contPrincipal .cont4 {
     width: 66%;
     height: 22vmax;
     float: right;
 
-    border: 1px #f5f5f5 dashed;
+    /* border: 1px #f5f5f5 dashed; */
 }
-
-
-
-
-
-
 
 
 
@@ -281,9 +314,16 @@ section .caixa .container2 {
     /* border: 1px solid red */
 }
 
-section .container3 {
-    width: 100%;
-    height: 20.1vmax;
 
-    /* background-color: #e6bc16; */
+/* Div escondida do botão 2 (Analytics) */
+.testeAgora {
+    width: 85%;
+    height: 45.73vmax;
+    background-color: #f5f5f5;
+    border-radius: 50px 0 0 50px;
+    float: right;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
