@@ -36,13 +36,22 @@ foreign key (fkSensor) references Sensor (idSensor)
 
 drop table Plantacao;
 
+create table Setor (
+idSetor int primary key,
+Localização varchar (45),
+fkPlantacao int,
+fkSetor int,
+foreign key (fkPlantacao) references Plantacao (idPlantacao),
+foreign key (fkSetor) references Setor (idSetor)
+);
+
+
 create table Sensor (
 idSensor int primary key,
-nome varchar(45),
+Nome varchar(45),
 Temperatura decimal(4,2),
 Umidade decimal(4,2),
-DataHora datetime,
-Localizacao varchar (45)
+DataHora datetime
 );
 
 
@@ -56,22 +65,33 @@ INSERT INTO Endereco VALUES
 
 INSERT INTO Plantacao VALUES
 (1, 1, 'Recanto do Aroma', 5000, 'Arábica', 1),
-(2, 2, 'Plantação Café Zé', 1000, 'Robusta');
+(2, 2, 'Plantação Café Zé', 1000, 'Robusta', 2);
+
+INSERT INTO Setor VALUES
+(1, 'Setor1', 1, 1),
+(2, 'Quadra14', 2, 2);
+
 
 INSERT INTO Sensor VALUES
-(1, 'A-01', '19', '55', '2022-10-19 09:50:17', 'Setor1'),
-(2, 'A-02', '23', '37', '2022-10-19 10:18:39', 'Quadra14');
-
+(1, 'A-01', '19', '55', '2022-10-19 09:50:17'),
+(2, 'A-02', '23', '37', '2022-10-19 10:18:39');
 
 
 SELECT * FROM Cliente;
 SELECT * FROM Endereco;
 SELECT * FROM Plantacao;
 SELECT * FROM Sensor;
+SELECT * FROM Setor;
 
-
+desc Cliente;
 desc Endereco;
 desc Plantacao;
 desc Sensor;
+desc Setor;
+
+
+SELECT Nome, Sobrenome, Email, Telefone, CPF, CNPJ, dtNascimento FROM Cliente
+JOIN Plantacao on idPlantacao = fkPlantacao;
+
 
 drop database Capulus;
