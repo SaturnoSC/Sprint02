@@ -9,7 +9,21 @@
     <link rel="stylesheet" href="./css/dash.css">
     <link rel="icon" href="./img/logoIcon.png">
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- Links dos icones -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
@@ -51,6 +65,8 @@
                 <a onclick="analytics()" id="botao-2"><span class="material-symbols-outlined">
                         query_stats
                     </span> Analytics</a>
+
+
                 <a onclick="mural()" id="botao-3"> <span class="material-symbols-outlined">
                         push_pin
                     </span>
@@ -68,32 +84,92 @@
 
 
     <section id="section-one">
-        <div class="caixa">
-            <div class="container1">
-                <div class="contPrincipal">
-                    <div class="caixinha">
-                        <div class="cont1">
-
+        <div class="container1" id="sec1-cont1">
+            <div class="titulo">
+                <h2>Dashboard</h2>
+            </div>
+            <div class="conteudo" id="con1-conteudo">
+                <div class="temp" id="cont1-temp">
+                    <h3>Temperatura atual</h3>
+                    <div class="tempAtual">
+                        <h2>20°</h2>
+                    </div>
+                </div>
+                <div class="umi" id="cont1-umi">
+                    <h3>Umidade atual</h3>
+                    <div class="umiAtual">
+                        <h2>45%</h2>
+                    </div>
+                </div>
+                <div class="limites" id="cont1-limites">
+                    <h3>Métricas</h3>
+                    <div class="temperatura">
+                        <span class="material-symbols-outlined">
+                            device_thermostat
+                        </span>
+                        <div class="barra">|
                         </div>
-                        <div class="cont2">
-
-                        </div>
-                        <div class="cont3">
-
+                        <div class="minmax">
+                            <h5>22°<span class="material-symbols-outlined" style="color: red; padding-left: 8px;">
+                                    expand_less
+                                </span></h5>
+                            <h5>18°<span class="material-symbols-outlined" style="color: green;">
+                                    expand_more
+                                </span></h5>
                         </div>
                     </div>
-                    <div class="cont4">
 
+                    <div class="umidade">
+                        <span class="material-symbols-outlined">
+                            humidity_mid
+                        </span>
+                        <div class="barra">
+                            <p>|</p>
+                        </div>
+                        <div class="minmax">
+                            <h5>60% <span class="material-symbols-outlined" style="color: red;">
+                                    expand_less
+                                </span></h5>
+                            <h5>20% <span class="material-symbols-outlined" style="color: green;">
+                                    expand_more
+                                </span></h5>
+                        </div>
                     </div>
+                </div>
+                <div class="analitics" id="analitics"></div>
+            </div>
+        </div>
+
+
+
+        <!--  container com as divs de chartJS  -->
+        <div class="contPrincipal">
+            <div class="cont1">
+                <h2>Temperatura & Umidade em linhas</h2>
+
+                <div>
+                    <canvas id="ChartLinhas" class="linhas"></canvas>
                 </div>
             </div>
 
-            <div class="container2"></div>
+            <div class="cont2">
+
+                <h2>Temperatura & Umidade em barras</h2>
+
+                <div>
+                    <canvas id="ChartBarras" class="barras"></canvas>
+                </div>
+            </div>
+
         </div>
 
-        <!-- <div class="container3"></div> -->
-
     </section>
+
+
+
+
+
+
 
     <section class="segundaSection" id="section-two"></section>
 
@@ -105,6 +181,83 @@
     </section>
 
 </body>
+<!-- chartJS -->
+<!-- // Esses scripts vão depois que fecha o BODY e antes de fechar o html -->
+<script>
+    const labels = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+    ];
+    const labels2 = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Temperatura',
+            backgroundColor: 'black',
+            borderColor: 'white',
+            data: [30, 29, 28, 25, 22, 23],
+        },
+        {
+            label: 'Umidade',
+            backgroundColor: 'black',
+            borderColor: '#e6bc16',
+            data: [80, 82, 80, 85, 80, 83],
+        }]
+
+    };
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Temperatura Média',
+            backgroundColor: 'white',
+            borderColor: 'black',
+            data: [22, 24, 27, 23, 20, 8],
+        },
+        {
+            label: 'Umidade Média',
+            backgroundColor: '#e6bc16',
+            borderColor: 'black',
+            data: [90, 89, 93, 87, 88, 82],
+        }]
+
+    };
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+    };
+    const config2 = {
+        type: 'bar',
+        data: data2,
+        options: {}
+    };
+</script>
+
+<script>
+    const Linhas = new Chart(
+        document.getElementById('ChartLinhas'),
+        config
+    );
+    const Barras = new Chart(
+        document.getElementById('ChartBarras'),
+        config2
+    );
+</script>
+
+
+
 
 </html>
 <script>
@@ -175,36 +328,69 @@
         var sectionOne = document.getElementById("section-one")
         var menuBar = document.getElementById("menu-bar")
         var primeiraParte = document.getElementById("primeira-parte")
+        var sec1Cont1 = document.getElementById("sec1-cont1")
+        var cont1Limites = document.getElementById("cont1-limites")
+        var analitics = document.getElementById("analitics")
+        var con1Conteudo = document.getElementById("con1-conteudo")
+
+        var cont1Temp = document.getElementById("cont1-temp")
+        var cont1Umi = document.getElementById("cont1-umi")
+
+        var avisoWarning = document.getElementById("warning")
 
         if (numBar == 1) {
             navBar.style.left = "0"
             sectionOne.style.width = "85%"
             sectionTwo.style.width = "85%"
             sectionThre.style.width = "85%"
-            
-            sectionOne.style.borderRadius="0"
-            sectionTwo.style.borderRadius="0"
-            sectionThre.style.borderRadius="0"
 
-            primeiraParte.style.width="70%"
+            sectionOne.style.borderRadius = "0"
+            sectionTwo.style.borderRadius = "0"
+            sectionThre.style.borderRadius = "0"
 
-            menuBar.style.right = "1095px"
+            // Containers das section 1
+            sec1Cont1.style.width = "85%"
+
+            con1Conteudo.style.width = "85%"
+
+            cont1Temp.style.width = "20%"
+            cont1Umi.style.width = "20%"
+
+            cont1Limites.style.width = "50%"
+            analitics.style.display = "none"
+
+
+            primeiraParte.style.width = "70%" // da section 3
+
+            menuBar.style.right = "1100px"
             numBar = 0
-        } else if (numBar == 0) {
+        } else {
             navBar.style.left = "-14%"
             sectionOne.style.width = "95%"
             sectionTwo.style.width = "95%"
             sectionThre.style.width = "95%"
 
-            sectionOne.style.borderRadius="25px 0 0 25px"
-            sectionTwo.style.borderRadius="25px 0 0 25px"
-            sectionThre.style.borderRadius="25px 0 0 25px"
+            sectionOne.style.borderRadius = "30px 0 0 30px"
+            sectionTwo.style.borderRadius = "30px 0 0 30px"
+            sectionThre.style.borderRadius = "30px 0 0 30px"
 
-            primeiraParte.style.width="90%"
+            // Containers das section 1
+            sec1Cont1.style.width = "95%"
+
+            con1Conteudo.style.width = "95%"
+
+            cont1Temp.style.width = "15%"
+            cont1Umi.style.width = "15%"
+
+            cont1Limites.style.width = "40%"
+            analitics.style.display = "flex"
+
+            primeiraParte.style.width = "90%"
 
             menuBar.style.right = "1315px"
             numBar = 1
         }
-    }
 
+
+    }
 </script>

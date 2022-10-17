@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 /* 'Ubuntu' */
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+/* 'Quicksand' */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +19,7 @@ body {
 
 nav {
     width: 15%;
-    height: 45.73vmax;
+    height: 47.5vmax;
     background-color: #123142;
     float: left;
     position: relative;
@@ -24,7 +27,6 @@ nav {
 
     transition: all 1s;
     /* border-right: 1px solid #e6bc16; */
-
 }
 
 .teste {
@@ -52,11 +54,13 @@ nav .logo {
 
     /* border: 1px blue solid; */
 }
-nav .logo img{
+
+nav .logo img {
     opacity: 0.7;
     transition: all 0.7s;
 }
-nav .logo img:hover{
+
+nav .logo img:hover {
     opacity: 1;
     transform: scale(1.1);
 }
@@ -117,7 +121,6 @@ nav .bar .espaco span {
     font-weight: 700;
 }
 
-
 nav .bar .botoes {
     width: 100%;
     height: 200px;
@@ -175,7 +178,7 @@ nav .saida a {
     font-size: 15px;
 }
 
-nav .saida a:hover{
+nav .saida a:hover {
     color: #f5f5f55f;
 }
 
@@ -190,19 +193,12 @@ nav .saida span {
 
 
 
-
-
-
-
-
-
-
 /* #section-one */
 section {
     width: 95%;
-    height: 45.73vmax;
+    height: 47.5vmax;
     background-color: #383838;
-    border-radius: 25px 0 0 25px;
+    border-radius: 30px 0 0 30px;
     float: right;
     align-items: center;
     justify-content: space-between;
@@ -213,96 +209,278 @@ section {
     transition: all 1s;
 }
 
-section .caixa {
-    width: 99.8%;
-    height: 28vmax;
-    display: flex;
+/* "Parte de cima que mostra a temperatura e umdade atual e métricas */
+section .container1 {
+    width: 95%;
+    height: 20vmax;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    margin: 0 auto;
+    transition: all 1.5s;
+    /* background-color: rgba(0, 0, 255, 0.196); */
 
     /* border: 1px solid blue; */
 }
 
-section .caixa .container1 {
-    width: 50%;
-    height: 28vmax;
+/* One está escrito 'Dashboard' */
+section .container1 .titulo {
+    width: 95%;
+    height: 5vmax;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
+    margin: 0 auto;
+    /* padding-left: 50px; */
+    /* background-color: #e5bc165f; */
+}
+
+section .container1 h2 {
+    color: #f5f5f5;
+    font-family: 'Quicksand';
+    font-size: 30px;
+    font-weight: normal;
+}
+
+/* div que controla as divs que será mostrado os dados */
+section .container1 .conteudo {
+    width: 95%;
+    height: 14vmax;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* background-color: #ffffff5f; */
+}
+
+/* Toda parte de temperatura */
+section .container1 .conteudo .temp {
+    width: 15%;
+    height: 12vmax;
+    border: 1.5px solid #f5f5f5;
+    border-radius: 20px;
+    transition: all 1s;
+}
+
+section .container1 .conteudo .temp h3 {
+    color: #e6bc16;
+    font-family: 'ubuntu';
+    font-weight: normal;
+    font-size: 15px;
+    margin: 20px;
+}
+
+section .container1 .conteudo .temp .tempAtual {
+    width: 100%;
+    height: 5vmax;
+    display: flex;
     justify-content: center;
-    border-radius: 50px;
-
-    /* border: 1px solid red; */
-}
-
-/* Div da esquerda, principal */
-section .caixa .container1 .contPrincipal {
-    width: 60%;
-    height: 26vmax;
-    border-radius: 10px;
-    display: flex;
-    /* justify-content: center; */
     align-items: center;
 
-    /* border: 1px #e6bc16 solid; */
+    /* background-color: #ffffff5f; */
 }
 
-/* "Mãe" das caixas laterais */
-section .caixa .container1 .contPrincipal .caixinha {
-    width: 34%;
-    height: 26vmax;
-
-    /* border: 1px red solid; */
+section .container1 .conteudo .temp h2 {
+    color: #f5f5f5;
+    font-family: 'Quicksand';
+    font-weight: normal;
+    font-size: 60px;
 }
 
-/* Três caixas laterias */
-section .caixa .container1 .contPrincipal .cont1 {
+/* Toda parte de umidade */
+section .container1 .conteudo .umi {
+    width: 15%;
+    height: 12vmax;
+    border: 1.5px solid #f5f5f5;
+    border-radius: 20px;
+    transition: all 1s;
+}
+
+section .container1 .conteudo .umi h3 {
+    color: #e6bc16;
+    font-family: 'ubuntu';
+    font-weight: normal;
+    font-size: 15px;
+    margin: 20px;
+}
+
+section .container1 .conteudo .umi .umiAtual {
     width: 100%;
-    height: 8.55vmax;
-    border-radius: 10px;
-
-    /* border: 1px blueviolet solid; */
-}
-
-section .caixa .container1 .contPrincipal .cont2 {
-    width: 100%;
-    height: 8.55vmax;
-    border-radius: 10px;
-
-    /* border: 1px dimgray solid; */
-}
-
-section .caixa .container1 .contPrincipal .cont3 {
-    width: 100%;
-    height: 8.55vmax;
-    border-radius: 10px;
-
-    /* border: 1px royalblue solid; */
-}
-
-section .caixa .container1 .contPrincipal .cont4 {
-    width: 66%;
-    height: 22vmax;
-    float: right;
-
-    /* border: 1px #f5f5f5 dashed; */
-}
-
-section .caixa .container2 {
-    width: 50%;
-    height: 350px;
+    height: 5vmax;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: end;
+
+    /* background-color: #ffffff5f; */
+}
+
+section .container1 .conteudo .umi h2 {
+    color: #f5f5f5;
+    font-family: 'Quicksand';
+    font-weight: normal;
+    font-size: 60px;
+}
+
+/* Toda parte de métricas */
+section .container1 .conteudo .limites {
+    width: 40%;
+    height: 12vmax;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
+    /* border: 1.5px solid #f5f5f5; */
+    border-radius: 20px;
+    transition: all 1s;
 
-    /* border: 1px solid red */
+    /* background-color: #faafff5f; */
 }
+
+section .container1 .conteudo .limites h3{
+    color: #f5f5f5;
+    font-family: 'Ubuntu';
+    font-weight: normal;
+    font-size: 17px;
+    margin-left: 30px;
+}
+
+section .container1 .conteudo .limites .temperatura, .umidade {
+    width: 100%;
+    height: 4.5vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+
+}   
+
+section .container1 .conteudo .limites .temperatura span, .umidade span {
+    font-size: 25px;
+    color: #f5f5f5;
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+section .container1 .conteudo .limites .temperatura .barra {
+    width: 50%;
+    height: 12px;
+    border-radius: 50px;
+    background-image: linear-gradient(to left, #ff2424, #0073ff);
+    color: #f5f5f5;
+    font-family: 'ubuntu';
+    font-weight: normal;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container1 .conteudo .limites .umidade .barra {
+    width: 50%;
+    height: 12px;
+    border-radius: 50px;
+    background-image: linear-gradient(to left, #0008ff, #00d1f6);
+    color: #0040d4;
+    font-family: 'ubuntu';
+    font-weight: normal;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 50px; */
+}
+
+section .container1 .conteudo .limites .umidade .barra p{
+    margin-left: 65px;
+    font-size: 25px;
+    color: #f5f5f5;
+}
+
+section .container1 .conteudo .limites .minmax{
+    width: 20%;
+    height: 3vmax;
+    /* background-color: #ffffff5f; */
+    font-family: 'Quicksand';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #f5f5f5;
+}
+
+section .container1 .conteudo .limites .minmax h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column;   */
+}
+
+section .container1 .conteudo .analitics{
+    width: 24%;
+    height: 12vmax;
+    display: flex;
+    transition: all 1s;
+    border: 1px solid #36bc16;
+}
+
+
+
+
+
+
+
+section .contPrincipal {
+    width: 95%;
+    height: 27vmax;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.105);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* border: 1px #f5f5f5 solid; */
+}
+
+section .container2 .cont1, section .container2 .cont2 {
+    width: 40%;
+    height: 25vmax;
+}
+
+section .contPrincipal h2{
+    font-family: 'Quicksand';
+    color: #f5f5f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Div escondida do botão 2, Analytics */
 .segundaSection {
     width: 85%;
-    height: 45.73vmax;
+    height: 47.5vmax;
     background-color: #124312;
     border-radius: 25px 0 0 25px;
     float: right;
@@ -318,7 +496,7 @@ section .caixa .container2 {
 /* Div escondida do botão 3, Mural de Avisos */
 .terceiraSection {
     width: 85%;
-    height: 45.73vmax;
+    height: 47.5vmax;
     background-color: #383838;
     border-radius: 25px 0 0 25px;
     float: right;
@@ -329,7 +507,7 @@ section .caixa .container2 {
     transition: all 1s;
 }
 
-.terceiraSection .primeiraParte{
+.terceiraSection .primeiraParte {
     width: 70%;
     height: 180px;
     border: 1px solid green;
