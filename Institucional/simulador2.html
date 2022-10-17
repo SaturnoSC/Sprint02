@@ -5,22 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador Financeiro</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/simulador.css">
+    <link rel="icon" href="./img/AAA.png">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Saturno SC | Simulador</title>
 </head>
 
 <body>
-    <h1 style="color: #142123;">Simulador Financeiro</h1>
 
-    <select id="sel_simulador">
-        <option value="">Oi né</option>
-        <option value="1">Arábica</option>
-        <option value="2">Conilon</option>
-        <option value="3">Robusta</option>
-    </select><br><br>
-    <input id="ipt_tamanho" placeholder="Insira o tamanho da fazenda"><br>
-    <input id="ipt_perda" placeholder="Insira sua perca atual"><br><br>
-    <button onclick="analise()">Calcular</button>
-    <div id="resultado"></div>
+    <section>
+        <h1>Simulador Financeiro</h1>
+
+        <select id="sel_simulador">
+            <option value="">Ver opções</option>
+            <option value="1">Arábica</option>
+            <option value="2">Conilon</option>
+            <option value="3">Robusta</option>
+        </select><br>
+
+        <p>Insira o tamanho da fazenda: <input id="ipt_tamanho" placeholder="Em m²"></p>
+        <button onclick="analise()">Simular</button>
+        <div id="resultado"></div>
+
+    </section>
+
 </body>
 
 </html>
@@ -30,8 +39,7 @@
     function analise() {
         // MEDIDAS
         var tamanho = Number(ipt_tamanho.value)
-        var perda = Number(ipt_perda.value)
-        
+
         // TIPAGEM
         var tipo = sel_simulador.value
         tipo == 1
@@ -39,51 +47,60 @@
         tipo == 3
 
         // VALORES
-        var implementacao = 25000
         var servico = 10000
-        var sensorA = (producaoA / 20) * 20 //a quantidade de m² necessarias para produzir uma saca / pelo alcance * o valor 
-        var sensorC = (producaoC / 20) * 20
-        var sensorR = (producaoR / 20) * 20
-        var exemplo = perda * 0.5
+        var sensor = (tamanho / 20) * 25  //tamanho / pelo alcance * o valor 
+        var implementacao = (sensor + servico).toFixed(2)
 
         var producaoA = 369 //quantidade de m² necessarias para produzir uma saca 
         var arabica = 1226 //valor da saca 
-        
+
         var producaoC = 243 //quantidade de m² necessarias para produzir uma saca
         var conilon = 663 //valor da saca
-        
+
         var producaoR = 230 //quantidade de m² necessarias para produzir uma saca
         var robusta = 686 //valor da saca
 
         // 369m² para produzir uma saca , dividir o tamanho da fazendo por 
         // esse valor para saber a quantidade de sacas produzidas pela fazenda
         // multiplicar o resultado pelo valor da saca para descobrir a renda do otario
-        // subtrair o valor pela perda para saber o lucro 
+        // subtrair o valor pela perda para saber o lucro
         // lucro vai ser comparado com o valor do nosso serviço
-        
-        if (tipo == 1) {
-            var ganho = (tamanho / producaoA) * arabica
-            resultado.innerHTML = `Atualmente você está tendo o ganho de: R$ ${(ganho - perda).toFixed(2)} 
-            Levando em consideração que o nosso serviço custa ${servico}, <br>nos contratando o valor final seria 
-            de ${((ganho - implementacao) - exemplo).toFixed(2)} no mês consecutivo o valor estimado com a 
-            redução da perda seria de: R$ ${((ganho - exemplo) - servico).toFixed(2)}`
-        }
 
-        if (tipo == 2) {
-            var ganho = (tamanho / producaoC) * conilon
-            resultado.innerHTML = `Atualmente você está tendo o ganho de: R$ ${(ganho - perda).toFixed(2)} 
-            Levando em consideração que o nosso serviço custa ${servico}, <br>nos contratando o valor final seria 
-            de ${((ganho - exemplo) - implementacao).toFixed(2)} no mês consecutivo o valor estimado com a 
-            redução da perda seria de: R$ ${((ganho - exemplo) - servico).toFixed(2)}`
-        }
+        if (tamanho == "" || tipo == "") {
+            alert('Preencha todos os campos ⚠')
+        } else {
+            if (tipo == 1) {
+                var ganho = (tamanho / producaoA) * arabica
+                var perda1 = ((tamanho / producaoA) * arabica) * 0.20
+                var perda2 = ((tamanho / producaoA) * arabica) * 0.35
 
-        if (tipo == 3) {
-            var ganho = (tamanho / producaoR) * robusta
-            resultado.innerHTML = `Atualmente você está tendo o ganho de: R$ ${(ganho - perda).toFixed(2)} 
-            Levando em consideração que o nosso serviço custa ${servico}, <br>nos contratando o valor final seria 
-            de ${((ganho - exemplo) - implementacao).toFixed(2)} no mês consecutivo o valor estimado com a 
-            redução da perda seria de: R$ ${((ganho - exemplo) - servico).toFixed(2)}`
+                resultado.innerHTML = `Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
+            o lucro de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <b>${((perda1 + perda2) / 2).toFixed(2)}</b>, 
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, 
+            no mês consecutivo o valor estimado com a redução da perda o seu lucro será de: R$ ${(ganho * 0.9).toFixed(2)}`
+            }
+
+            if (tipo == 2) {
+                var ganho = (tamanho / producaoC) * conilon
+                var perda1 = ((tamanho / producaoC) * conilon) * 0.20
+                var perda2 = ((tamanho / producaoC) * conilon) * 0.35
+
+                resultado.innerHTML = `Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
+            o lucro de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <b>${((perda1 + perda2) / 2).toFixed(2)}</b>, 
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, 
+            no mês consecutivo com a redução da perda, o seu lucro estimado será de: R$ ${(ganho * 0.9).toFixed(2)}`
+            }
+
+            if (tipo == 3) {
+                var ganho = (tamanho / producaoR) * robusta
+                var perda1 = ((tamanho / producaoR) * robusta) * 0.20
+                var perda2 = ((tamanho / producaoR) * robusta) * 0.35
+
+                resultado.innerHTML = `Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
+            o lucro médio de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <b>${((perda1 + perda2) / 2).toFixed(2)}</b>, 
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, 
+            no mês consecutivo o valor estimado com a redução da perda o seu lucro será de: R$ ${(ganho * 0.90).toFixed(2)}`
+            }
         }
     }
-
 </script>
