@@ -126,28 +126,22 @@ nav .bar .botoes {
     height: 200px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: column;
-
-    /* border: 1px green solid; */
 }
 
 nav .bar .botoes a {
     width: 73%;
     height: 3vmax;
     display: flex;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: center;
     background-color: transparent;
     color: #e6bc16;
     font-family: 'Ubuntu';
     text-decoration: none;
     border-radius: 20px;
-    padding-left: 30px;
-}
-
-nav .bar .botoes a span {
-    margin-right: 10px;
+    /* padding-left: 30px; */
 }
 
 nav .bar .botoes a:hover {
@@ -260,7 +254,7 @@ section .container1 .conteudo .temp {
     height: 12vmax;
     border: 1.5px solid #f5f5f5;
     border-radius: 20px;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 section .container1 .conteudo .temp h3 {
@@ -419,14 +413,37 @@ section .container1 .conteudo .limites .minmax h5{
 
 section .container1 .conteudo .analitics{
     width: 24%;
-    height: 12vmax;
+    height: 14vmax;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     transition: all 1s;
-    border: 1px solid #36bc16;
+    /* border: 1px solid #36bc16; */
 }
 
+section .container1 .conteudo .analitics .grupo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+section .container1 .conteudo .analitics button{
+    width: 50px;
+    height: 50px;
+    background-color: #1231429f;
+    border: 0.1px solid #e6bc16;
+    margin: 10px;
+    color: #e6bc16;
+    border-radius: 8px;
+    transition: all 0.8s;
+}
 
+section .container1 .conteudo .analitics button:hover{
+    transform: scale(1.2);
+    background-color: #123142;
+    box-shadow: 0 0 40px 8px #123142;
+}
 
 
 
@@ -435,7 +452,7 @@ section .contPrincipal {
     width: 95%;
     height: 27vmax;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.105);
+    /* background-color: rgba(255, 255, 255, 0.105); */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -443,55 +460,69 @@ section .contPrincipal {
     /* border: 1px #f5f5f5 solid; */
 }
 
-section .container2 .cont1, section .container2 .cont2 {
-    width: 40%;
-    height: 25vmax;
-}
-
 section .contPrincipal h2{
     font-family: 'Quicksand';
     color: #f5f5f5;
+    margin: 30px 0;
+    font-weight: normal;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+section .contPrincipal .cont1, section .contPrincipal .cont2 {
+    width: 42%;
+    /* height: 25vmax; */
+}
 
 
 /* Div escondida do botão 2, Analytics */
 .segundaSection {
     width: 85%;
     height: 47.5vmax;
-    background-color: #124312;
+    background-color: #123142;
     border-radius: 25px 0 0 25px;
     float: right;
     display: none;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     transition: all 1s;
 }
 
+.segundaSection h3{
+    color: #e6cb16;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-family: 'Quicksand';
+}
 
+.segundaSection .botoesConfirma{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.segundaSection .botoesConfirma a{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    font-family: 'ubuntu';
+    font-weight: normal;
+    color: #f5f5f5;
+    text-decoration: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    transition: all 1s;
+}
+
+.segundaSection .botoesConfirma a:hover{
+    font-size: 28px;
+    color: #f5f5f55f;
+    text-decoration: underline;
+}
 
 /* Div escondida do botão 3, Mural de Avisos */
 .terceiraSection {
@@ -512,4 +543,5 @@ section .contPrincipal h2{
     height: 180px;
     border: 1px solid green;
     transition: all 1s;
+    /* overflow-y: scroll; */
 }
