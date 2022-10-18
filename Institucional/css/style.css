@@ -16,12 +16,6 @@ a {
 section {
     width: 100%;
     height: 46.7vmax;
-    /* margin: 0; */
-    /* background-color: rgb(171, 187, 186); */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row; */
     padding-bottom: 10px;
     background-image: url('./../img/fundo6.jpg  ');
     background-size: cover;
@@ -43,6 +37,7 @@ nav {
 
 nav:hover{
     background-color: #123142e1;
+    box-shadow: 0 0 20px #E6BC16;
 }
 
 nav .logo {
@@ -160,7 +155,7 @@ nav .bar .aqui, .bar2 .aqui{
     flex-direction: column;
 
     /* border: 1px solid red; */
-}
+} 
 
 .principal .texto h2 {
     font-family: 'Ubuntu';

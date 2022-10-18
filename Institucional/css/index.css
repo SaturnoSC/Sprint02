@@ -234,13 +234,9 @@ footer {
 
 footer img {
     padding: 30px 15px;
-    opacity: 0.5;
     transition: all 1.5s;
-}
-
-footer img:hover {
-    opacity: 1;
-    padding-left: 600px;
+    align-items: center;
+    justify-content: center;
 }
 
 footer .conteudo {
