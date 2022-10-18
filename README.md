@@ -32,6 +32,6 @@ Um sistema IOT empregado com uma solução de temperatura e umidade para auxilia
 
     11. Terça-feira (presencial): Revisão e preparo para apresentação da Sprint Review no dia seguinte na aula de P.I;
 
-   
-
     12. Sexta-feira (remoto): Organização e execução das demais tarefas do projeto;
+    
+    13. Proibido o uso de celulares durante a reunião(exceto para fins do projeto);
