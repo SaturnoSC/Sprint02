@@ -201,3 +201,12 @@ nav .bar .aqui, .bar2 .aqui{
 .principal button:hover {
     transform: scale(1.1);
 }
+
+/* QrCode do rodapé*/
+
+.qrCode {
+    height: 100px;
+    position: absolute;
+    margin-left: 1250px;
+    margin-top: -75px;
+}
