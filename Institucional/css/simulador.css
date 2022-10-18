@@ -1,52 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+/* 'Ubuntu' */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* 'Pavifico' */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+/* 'Cinzel' */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+/* 'Dancing Script' */
 
 * {
     margin: 0;
     padding: 0;
 }
 
+body{
+    background-color: #123142;
+}
+
 h1 {
-    margin-bottom: 32px;
-    font-size: 32px;
+    margin-bottom: 3px;
+    font-size: 25px;
     text-align: center;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
     color: #e6bc16;
 }
 
-.caixa-formulario {
+.geral {
+    height: 46.8vmax;
     display: flex;
-    height: 330px;
-    width: 400px;
-    padding: 50px;
-    margin: 40px 0 0;
     justify-content: center;
     align-items: center;
+}
+
+.geral .caixa-simulador {
+    display: flex;
     flex-direction: column;
-    border-radius: 10px;
     border: 2px solid #e6bc16;
+    align-items: center;
+    justify-content: space-around;
     background-color: #123142e1;
+    border-radius: 10px;
+    margin: 0px 50px 0px 50px;
+    padding: 10px 50px 40px;
+    width: 550px;
+    height: 350px;
 }
 
-.campo {
-    border: 2px solid black;
-    align-items: center;
+.geral .caixa-simulador .dados {
+    display: flex;
+    /* border: 2px solid coral; */
     justify-content: center;
+    align-items: center;
 }
 
-.inserir input {
-    height: 25px;
-    width: 280px;
-    margin-bottom: 14px;
-    margin-left: 15%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.geral .caixa-simulador .dados select {
+    width: 180px;
+    height: 30px;
+    padding-left: 9px;
+    border-radius: 10px;
     border: none;
-    border-bottom: 2px solid #e6bc16;
-    border-radius: 5px;
+    font-size: 15px;
+    font-style: bold;
+    color: black;
+    background-color: #e6bc16;
+}
+
+.geral .caixa-simulador .dados p {
+    color: #e6bc16;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 14px;
+    margin-right: 40px;
+}
+
+.geral .caixa-simulador .dados p input {
+    display: flex;
+    border: none;
+    font-size: 18px;
+    align-items: center;
+    color: whitesmoke;
     background-color: transparent;
-    color: white;
-    outline: unset;
+    border-bottom: 2px solid #e6bc16;
+    border-radius: 2px;
+    margin-top: 9px;
+    outline: none;
 }
 
 input:hover {
@@ -58,88 +96,100 @@ input::placeholder {
     font-size: 12px;
 }
 
-span {
-    color: #e6bc16;
-    margin-left: 7px;
-}
-
-label {
-    color: whitesmoke;
-    font-size: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-}
-
 .botao {
-    width: 30%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: 10px;
-    margin-left: 34%;
-    border-radius: 100px;
-    padding: 8px 16px;
+    color: #e6bc16;
+    background-color: transparent;
+    padding: 9px 16px;
     border: none;
-    outline: none;
-    font-size: 16px;
-    font-weight: 700;
-    color: rgb(233, 217, 233);
-    background-color: #e6bc16;
-    text-shadow: 5px 5px 8px black;
-    transition: all 0.7s;
+    border-radius: 7px;
+    border: 2px solid #e6bc16;
+    width: 110px;
     cursor: pointer;
+    transition: all 0.9s;
 }
 
 .botao:hover {
-    color: white;
+    border-radius: 20px;
+    transform: scale(1.1);
+    color: #123142;
+    font-weight: bold;
     background-color: #e6bc16;
-    box-shadow: 1px 1px 4px 4px #e6bc16;
-    transform: scale(1.06);
-}
-
-.mensagem {
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-    margin: 20px 10px;
-    padding-bottom: 6px;
 }
 
 /* Footer */
+footer {
+    width: 100%;
+    height: 12vmax;
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-end; */
+}
 
-.rodape {
+
+footer img {
+    padding: 30px 15px;
+    opacity: 0.5;
+    transition: all 1.5s;
+}
+
+footer .conteudo {
+    width: 60%;
+    height: 12vmax;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-left: 20px;
+    /* border: 1px #e6bc16 solid; */
+}
+
+
+footer .conteudo h3 {
+    color: #e6bc16df;
+    font-family: 'Dancing script';
+    font-weight: normal;
+    font-size: 25px;
+}
+
+footer .conteudo a {
+    color: #f5f5f5af;
+    margin: 5px 0;
+    transition: all 0.4s;
+}
+
+footer .conteudo a:hover{
+    color: #f5f5f55f;
+}
+
+footer .links1 {
+    width: 20%;
+    height: auto;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+footer .links2,
+footer .links3 {
+    width: 30%;
+    height: auto;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.final {
+    width: 100%;
+    height: 5vmax;
+    background-color: #091921;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #123142;
-    padding-bottom: 5px;
-}
-
-.rodape p {
-    color: #E6BC16;
-    position: absolute;
-    margin-top: 35px;
-    padding-top: 5px;
-    font-weight: 550;
-}
-
-.social {
-    /* border: 2px solid black; */
-    padding: 25px;
-    height: 10px;
-    margin-bottom: 10px;
-}
-
-.rodape .linha {
-    width: 150px;
-    height: 5px;
-    border: none;
-    border-bottom: 1.5px #e6bc16 solid;
-    border-radius: 2px;
-    color: beige;
-    margin-bottom: 5px;
+    color: #f5f5f5;
+    font-size: 13px;
+    font-weight: 200;
 }

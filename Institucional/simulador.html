@@ -1,103 +1,155 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/simulador.css">
     <link rel="icon" href="./img/AAA.png">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <title>Simulador Financeiro</title>
+    <title>Saturno SC | Simulador</title>
 </head>
 
 <body>
-    <section>
-        <nav>
-            <div class="logo">
-                <a href="./index.html"><img src="./img/logoSite.png"></a>
-            </div>
-            <div class="bar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="./index.html#sobreNos">Sobre Nós</a></li>
-                    <li><a href="./index.html#mvv">Propósito</a></li>
-                    <li><a href="./simulador.html">Simulador financeiro</a></li>
-                </ul>
-            </div>
-            <div class="bar2">
-                <ul>
-                    <li class="aqui"><a href="./login.html" class="entrar">Entrar</a></li>
-                    <li><a href="./cadastro.html" class="cadastro">Cadastre-se</a></li>
-                </ul>
-            </div>
-        </nav>
-    
 
-        <div class="caixa-formulario">
-            <h1>Simulador Financeiro</h1>
-            <div class="campo">
-                <div class="inserir">
-                   
-                    <label for="in_tamanho">Tamanho do cafezal:</label>
-                    <input id="in_tamanho" placeholder="Digite a quantidade em hectares">
+    <nav>
+        <div class="logo">
+            <a href="./index.html"><img src="./img/logoSite.png"></a>
+        </div>
+        <div class="bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#sobreNos">Sobre Nós</a></li>
+                <li><a href="#mvv">Propósitos</a></li>
+                <li class="aqui"><a href="">Simulador Financeiro</a></li>
+            </ul>
+        </div>
+        <div class="bar2">
+            <ul>
+                <li><a href="./login.html" class="entrar">Entrar</a></li>
+                <li><a href="./cadastro.html" class="cadastro">Cadastre-se</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="geral">
+            <div class="caixa-simulador">
+                <h1>Simulador Financeiro</h1>
+                <div class="dados">
+                    <p>Insira o tamanho da fazenda: <input id="ipt_tamanho" placeholder="Em M²"></p>
+                    <select id="sel_simulador">
+                        <option value="">Ver opções</option>
+                        <option value="1">Arábica</option>
+                        <option value="2">Conilon</option>
+                        <option value="3">Robusta</option>
+                    </select>
                 </div>
-                <div class="inserir">
-                    <label for="in_prazo">Prazo estimado de uso do<span> Cap 11:<span></label>
-                    <input type="number" id="in_prazo" placeholder="Insira a quantidade em anos">
-                </div>
-                    <button class="botao" type="button" onclick="btn_calculo()">Verificar</button>
-                    <div class="mensagem" id="div_mensagem"></div>
+                <button onclick="analise()" class="botao">Simular</button>
+                <div id="resultado"></div>
             </div>
         </div>
-
     </section>
 
-    <footer>
-        <div class="rodape">
-            <div class="linha"></div>
-            <div class="social">
-                <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'
-                        style="color: #E6BC16"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'
-                        style="color: #E6BC16"></i></a>
-                <a href="https://www.twitter.com" target="_blank"><i class='bx bxl-twitter'
-                        style="color: #E6BC16"></i></a>
+    <!-- Rodapé -->
+    <footer id="footer">
+        <div class="imagem">
+            <a href="./index.html"> <img src="./img/logoSite.png" alt="" width="200"></a>
+        </div>
+
+        <div class="conteudo">
+            <div class="links1">
+                <h3>Site Institucional</h3>
+                <a href="./index.html">Home</a>
+                <a href="./index.html#sobreNos">Sobre Nós</a>
+                <a href="./index.html#mvv">Propósitos</a>
             </div>
-            <div class="linha"></div>
-            <p>Todos os direitos reservados a SaturnoSC &copy; Copyright</p>
+            <div class="links2">
+                <h3>Acesso</h3>
+                <a href="./login.html">Acesse já</a>
+                <a href="./cadastro.html">Ainda não tem acesso? <span>Cadastre-se aqui!</span></a>
+            </div>
+            <div class="links3">
+                <h3>Simulador financeiro</h3>
+                <a href="./simulador.html">Faça agora mesmo uma simulação conosco</a>
+            </div>
+        </div>
+        <div class="final">
+            <p>&copy; Todos os direitos reservados 2022 Saturno SC - CNPJ: 15.130.123/0001-29</p>
         </div>
     </footer>
-
 </body>
 
 </html>
 
 <script>
-    function btn_calculo() {
-        div_mensagem.innerHTML = ''
 
-        var tamanho = Number(in_tamanho.value)
-        var prazo = Number(in_prazo.value)
+    function analise() {
+        // MEDIDAS
+        var tamanho = Number(ipt_tamanho.value)
 
-        var conta = tamanho * 0.35
-        var resultado = conta * prazo
+        // TIPAGEM
+        var tipo = sel_simulador.value
+        tipo == 1
+        tipo == 2
+        tipo == 3
 
-        if (tamanho == '') {
-            alert('Por favor, informe o tamanho do cafezal!')
-        }
+        // VALORES
+        var servico = 10000
+        var sensor = (tamanho / 20) * 25  //tamanho / pelo alcance * o valor 
+        var implementacao = (sensor + servico).toFixed(2)
 
-        else {
-            if (tamanho == '') {
-                alert('Por favor, informe o prazo que pretende utilizar o serviço!')
+        var producaoA = 369 //quantidade de m² necessarias para produzir uma saca 
+        var arabica = 1226 //valor da saca 
+
+        var producaoC = 243 //quantidade de m² necessarias para produzir uma saca
+        var conilon = 663 //valor da saca
+
+        var producaoR = 230 //quantidade de m² necessarias para produzir uma saca
+        var robusta = 686 //valor da saca
+
+        // 369m² para produzir uma saca , dividir o tamanho da fazendo por 
+        // esse valor para saber a quantidade de sacas produzidas pela fazenda
+        // multiplicar o resultado pelo valor da saca para descobrir a renda do otario
+        // subtrair o valor pela perda para saber o lucro
+        // lucro vai ser comparado com o valor do nosso serviço
+
+        if (tamanho == "" || tipo == "") {
+            alert('Preencha todos os campos ⚠')
+        } else {
+            if (tipo == 1) {
+                var ganho = (tamanho / producaoA) * arabica
+                var perda1 = ((tamanho / producaoA) * arabica) * 0.20
+                var perda2 = ((tamanho / producaoA) * arabica) * 0.35
+
+                resultado.innerHTML = `<p style="color: #e6bc16; font-size: 18px;">Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
+            o lucro de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <span style="color: red; font-weight: bold;">${((perda1 + perda2) / 2).toFixed(2)}</span>. 
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, 
+            no mês consecutivo o valor estimado com a redução da perda o seu lucro será de: R$ ${(ganho * 0.9).toFixed(2)}.</p>`
             }
-            else {
 
-                div_mensagem.innerHTML += `<br>Adquirindo o Capulus 11 por ${prazo} anos, você reduzirá a perda da sua safra em média ${(resultado).toFixed(2)} % ao ano.`
+            if (tipo == 2) {
+                var ganho = (tamanho / producaoC) * conilon
+                var perda1 = ((tamanho / producaoC) * conilon) * 0.20
+                var perda2 = ((tamanho / producaoC) * conilon) * 0.35
+
+                resultado.innerHTML = `<p style="color: #e6bc16; font-size: 18px;">Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
+            o lucro de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <span style="color: red; font-weight: bold;">${((perda1 + perda2) / 2).toFixed(2)}</span>. 
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, 
+            no mês consecutivo com a redução da perda, o seu lucro estimado será de: R$ ${(ganho * 0.9).toFixed(2)}.</p>`
+            }
+
+            if (tipo == 3) {
+                var ganho = (tamanho / producaoR) * robusta
+                var perda1 = ((tamanho / producaoR) * robusta) * 0.20
+                var perda2 = ((tamanho / producaoR) * robusta) * 0.35
+
+                resultado.innerHTML = `<p style="color: #e6bc16; font-size: 18px;">Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
+            o lucro médio de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <span style="color: red; font-weight: bold;">${((perda1 + perda2) / 2).toFixed(2)}</span>. 
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, 
+            no mês consecutivo o valor estimado com a redução da perda o seu lucro será de: R$ ${(ganho * 0.90).toFixed(2)}.</p>`
             }
         }
-
     }
-
 </script>
-
-1 sensor a cada 20m²  -->
