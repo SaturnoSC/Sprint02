@@ -13,11 +13,19 @@ create table Cliente (
     dtNascimento date
 );
 
+create table endereco_cliente (]
+id
+
+
+
+);
+
 create table Endereco (
 idEndereco int primary key,
 CEP char(8),
 Logradouro varchar(45),
 Numero varchar(5),
+Complemento varchar(5),
 Bairro varchar(45),
 Cidade varchar(45),
 Estado varchar(45)
@@ -34,7 +42,6 @@ fkSensor int,
 foreign key (fkSensor) references Sensor (idSensor)
 );
 
-drop table Plantacao;
 
 create table Setor (
 idSetor int primary key,
@@ -83,15 +90,6 @@ SELECT * FROM Plantacao;
 SELECT * FROM Sensor;
 SELECT * FROM Setor;
 
-desc Cliente;
-desc Endereco;
-desc Plantacao;
-desc Sensor;
-desc Setor;
 
-
-SELECT Nome, Sobrenome, Email, Telefone, CPF, CNPJ, dtNascimento FROM Cliente
-JOIN Plantacao on idPlantacao = fkPlantacao;
-
-
-drop database Capulus;
+SELECT * FROM Cliente
+JOIN Plantacao ON (idCliente) = fkCliente;
