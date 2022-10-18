@@ -467,14 +467,14 @@ section .contPrincipal h2 {
     font-weight: normal;
 }
 
-<<<<<<< HEAD
+
 section .contPrincipal .cont1,
 section .contPrincipal .cont2 {
     width: 42%;
-=======
+}    
 section .contPrincipal .cont1, section .contPrincipal .cont2 {
     width: 45%;
->>>>>>> 51c06075852e64b2988b0725785aba4fef96b943
+
     /* height: 25vmax; */
 }
 
