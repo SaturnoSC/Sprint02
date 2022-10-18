@@ -332,7 +332,7 @@ section .container1 .conteudo .limites {
     /* background-color: #faafff5f; */
 }
 
-section .container1 .conteudo .limites h3{
+section .container1 .conteudo .limites h3 {
     color: #f5f5f5;
     font-family: 'Ubuntu';
     font-weight: normal;
@@ -340,7 +340,8 @@ section .container1 .conteudo .limites h3{
     margin-left: 30px;
 }
 
-section .container1 .conteudo .limites .temperatura, .umidade {
+section .container1 .conteudo .limites .temperatura,
+.umidade {
     width: 100%;
     height: 4.5vmax;
     display: flex;
@@ -348,9 +349,10 @@ section .container1 .conteudo .limites .temperatura, .umidade {
     align-items: center;
     margin: 10px 0;
 
-}   
+}
 
-section .container1 .conteudo .limites .temperatura span, .umidade span {
+section .container1 .conteudo .limites .temperatura span,
+.umidade span {
     font-size: 25px;
     color: #f5f5f5;
     font-weight: normal;
@@ -386,13 +388,13 @@ section .container1 .conteudo .limites .umidade .barra {
     /* margin-left: 50px; */
 }
 
-section .container1 .conteudo .limites .umidade .barra p{
+section .container1 .conteudo .limites .umidade .barra p {
     margin-left: 65px;
     font-size: 25px;
     color: #f5f5f5;
 }
 
-section .container1 .conteudo .limites .minmax{
+section .container1 .conteudo .limites .minmax {
     width: 20%;
     height: 3vmax;
     /* background-color: #ffffff5f; */
@@ -404,14 +406,14 @@ section .container1 .conteudo .limites .minmax{
     color: #f5f5f5;
 }
 
-section .container1 .conteudo .limites .minmax h5{
+section .container1 .conteudo .limites .minmax h5 {
     display: flex;
     justify-content: center;
     align-items: center;
     /* flex-direction: column;   */
 }
 
-section .container1 .conteudo .analitics{
+section .container1 .conteudo .analitics {
     width: 24%;
     height: 14vmax;
     display: flex;
@@ -422,13 +424,13 @@ section .container1 .conteudo .analitics{
     /* border: 1px solid #36bc16; */
 }
 
-section .container1 .conteudo .analitics .grupo{
+section .container1 .conteudo .analitics .grupo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section .container1 .conteudo .analitics button{
+section .container1 .conteudo .analitics button {
     width: 50px;
     height: 50px;
     background-color: #1231429f;
@@ -439,8 +441,8 @@ section .container1 .conteudo .analitics button{
     transition: all 0.8s;
 }
 
-section .container1 .conteudo .analitics button:hover{
-    transform: scale(1.2);
+section .container1 .conteudo .analitics button:hover {
+    transform: scale(1.13);
     background-color: #123142;
     box-shadow: 0 0 13px 0.5px #e6bc16;
     cursor: pointer;
@@ -458,14 +460,15 @@ section .contPrincipal {
     /* border: 1px #f5f5f5 solid; */
 }
 
-section .contPrincipal h2{
+section .contPrincipal h2 {
     font-family: 'Quicksand';
     color: #f5f5f5;
     margin: 30px 0;
     font-weight: normal;
 }
 
-section .contPrincipal .cont1, section .contPrincipal .cont2 {
+section .contPrincipal .cont1,
+section .contPrincipal .cont2 {
     width: 42%;
     /* height: 25vmax; */
 }
@@ -485,14 +488,14 @@ section .contPrincipal .cont1, section .contPrincipal .cont2 {
     transition: all 1s;
 }
 
-.segundaSection h3{
+.segundaSection h3 {
     color: #e6cb16;
     font-size: 1.5em;
     font-weight: normal;
     font-family: 'Quicksand';
 }
 
-.segundaSection .botoesConfirma{
+.segundaSection .botoesConfirma {
     width: 20%;
     display: flex;
     justify-content: space-evenly;
@@ -500,7 +503,7 @@ section .contPrincipal .cont1, section .contPrincipal .cont2 {
     margin: 20px 0;
 }
 
-.segundaSection .botoesConfirma a{
+.segundaSection .botoesConfirma a {
     width: 100px;
     height: 50px;
     border-radius: 20px;
@@ -516,7 +519,7 @@ section .contPrincipal .cont1, section .contPrincipal .cont2 {
     transition: all 1s;
 }
 
-.segundaSection .botoesConfirma a:hover{
+.segundaSection .botoesConfirma a:hover {
     font-size: 28px;
     color: #f5f5f55f;
     text-decoration: underline;
@@ -537,9 +540,106 @@ section .contPrincipal .cont1, section .contPrincipal .cont2 {
 }
 
 .terceiraSection .primeiraParte {
-    width: 70%;
-    height: 43vmax;
-    border: 1px solid green;
+    width: 80%;
+    height: 35vmax;
+    /* border: 1px solid green; */
     transition: all 1s;
-    /* overflow-y: scroll; */
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    background-color: #1231425f;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #e6bc168f;
+}
+
+.terceiraSection .sec3Titulo {
+    width: 80%;
+    height: 6vmax;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: all 1s;
+    /* border: 1px solid #f5f5f5; */
+}
+
+.terceiraSection .sec3Titulo h2 {
+    font-family: 'Quicksand';
+    color: #f5f5f5;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.terceiraSection .primeiraParte .info {
+    width: 98%;
+    height: 9.5vmax;
+    /* background-color: #ffffff5f; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border-top: 1px solid #e6bc165f; */
+}
+
+.terceiraSection .primeiraParte .info .lido,
+.terceiraSection .primeiraParte .info .apagar {
+    width: 15%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.terceiraSection .primeiraParte .info .lido span,
+.terceiraSection .primeiraParte .info .apagar span {
+    color: #e6bc16;
+    font-size: 30px;
+    transition: all 1s;
+}
+
+.terceiraSection .primeiraParte .info .lido p,
+.terceiraSection .primeiraParte .info .apagar p {
+    font-size: 11px;
+    color: #f5f5f5;
+    font-weight: normal;
+    font-family: 'Quicksand';
+    text-align: center;
+    transition: all 1s;
+}
+
+.terceiraSection .primeiraParte .info .lido span:hover,
+.terceiraSection .primeiraParte .info .apagar span:hover{
+    cursor: pointer;
+    color: #e6bc165f;
+}
+
+.terceiraSection .primeiraParte .info .lido p:hover,
+.terceiraSection .primeiraParte .info .apagar p:hover{
+    cursor: pointer;
+    color: #e6bc165f;
+}
+
+.terceiraSection .primeiraParte .info .mensagem {
+    width: 70%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.terceiraSection .primeiraParte .info .mensagem p{
+    color: #f5f5f5dd;
+    font-family: 'ubuntu';
+    font-weight: normal;
+    font-size: 20px;
+    transition: all 0.5s;
+    /* text-decoration: line-through; */
 }
