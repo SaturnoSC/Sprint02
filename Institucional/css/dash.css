@@ -442,11 +442,9 @@ section .container1 .conteudo .analitics button{
 section .container1 .conteudo .analitics button:hover{
     transform: scale(1.2);
     background-color: #123142;
-    box-shadow: 0 0 40px 8px #123142;
+    box-shadow: 0 0 13px 0.5px #e6bc16;
+    cursor: pointer;
 }
-
-
-
 
 section .contPrincipal {
     width: 95%;
@@ -533,14 +531,14 @@ section .contPrincipal .cont1, section .contPrincipal .cont2 {
     float: right;
     display: none;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     transition: all 1s;
 }
 
 .terceiraSection .primeiraParte {
     width: 70%;
-    height: 180px;
+    height: 43vmax;
     border: 1px solid green;
     transition: all 1s;
     /* overflow-y: scroll; */
