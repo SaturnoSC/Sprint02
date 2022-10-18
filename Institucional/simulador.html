@@ -38,7 +38,7 @@
             <div class="caixa-simulador">
                 <h1>Simulador Financeiro</h1>
                 <div class="dados">
-                    <p>Insira o tamanho da fazenda: <input id="ipt_tamanho" placeholder="Em M²"></p>
+                    <p>Insira o tamanho da fazenda: <input id="ipt_tamanho" type="number" placeholder="Em M²"></p>
                     <select id="sel_simulador">
                         <option value="">Ver opções</option>
                         <option value="1">Arábica</option>
@@ -73,6 +73,9 @@
             <div class="links3">
                 <h3>Simulador financeiro</h3>
                 <a href="./simulador.html">Faça agora mesmo uma simulação conosco</a>
+            </div>
+            <div class="qrCode">
+                <img src="./imagens/logodoQRcode.png" alt="Código QR para entra em contato conosco" width="130vh">
             </div>
         </div>
         <div class="final">
@@ -125,8 +128,8 @@
 
                 resultado.innerHTML = `<p style="color: #e6bc16; font-size: 18px;">Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
             o lucro de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <span style="color: red; font-weight: bold;">${((perda1 + perda2) / 2).toFixed(2)}</span>. 
-            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, 
-            no mês consecutivo o valor estimado com a redução da perda o seu lucro será de: R$ ${(ganho * 0.9).toFixed(2)}.</p>`
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, no mês consecutivo com a redução da 
+            perda o seu lucro será de: R$ <span style="color: #98FB98; font-weight: bold;">${(ganho * 0.9).toFixed(2)}</span>.</p>`
             }
 
             if (tipo == 2) {
@@ -136,8 +139,8 @@
 
                 resultado.innerHTML = `<p style="color: #e6bc16; font-size: 18px;">Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
             o lucro de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <span style="color: red; font-weight: bold;">${((perda1 + perda2) / 2).toFixed(2)}</span>. 
-            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, 
-            no mês consecutivo com a redução da perda, o seu lucro estimado será de: R$ ${(ganho * 0.9).toFixed(2)}.</p>`
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, no mês consecutivo com a redução da 
+            perda, o seu lucro estimado será de: R$ <span style="color: #98FB98; font-weight: bold;">${(ganho * 0.9).toFixed(2)}</span>.</p>`
             }
 
             if (tipo == 3) {
@@ -147,9 +150,9 @@
 
                 resultado.innerHTML = `<p style="color: #e6bc16; font-size: 18px;">Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
             o lucro médio de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <span style="color: red; font-weight: bold;">${((perda1 + perda2) / 2).toFixed(2)}</span>. 
-            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, 
-            no mês consecutivo o valor estimado com a redução da perda o seu lucro será de: R$ ${(ganho * 0.90).toFixed(2)}.</p>`
-            }
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, no mês consecutivo com a redução da 
+            perda o seu lucro será de: R$ <span style="color: #98FB98; font-weight: bold;">${(ganho * 0.90).toFixed(2)}</span>.</p>`
+           }
         }
     }
 </script>

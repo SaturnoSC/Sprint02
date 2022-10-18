@@ -162,8 +162,6 @@ footer {
 
 footer img {
     padding: 30px 15px;
-    opacity: 0.5;
-    transition: all 1.5s;
 }
 
 footer .conteudo {
@@ -214,7 +212,6 @@ footer .links3 {
     align-items: flex-start;
     flex-direction: column;
 }
-
 
 .final {
     width: 100%;

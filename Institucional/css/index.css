@@ -288,6 +288,12 @@ footer .links3 {
     flex-direction: column;
 }
 
+.qrCode {
+    height: 100px;
+    position: absolute;
+    margin-left: 1250px;
+    margin-top: -75px;
+}
 
 .final {
     width: 100%;
