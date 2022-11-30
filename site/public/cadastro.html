@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="icon" href="./img/AAA.png">
+    <title>Cadastre-se</title>
+</head>
+
+<body>
+    <section>
+        <div class="banner">
+            <div class="container">
+                <div class="caixa-formulario">
+                    <div class="logo">
+                        <a href="./index.html"><img src="./img/logoSite.png" width="190"></a>
+                    </div>
+                    <h1>Bem-vindo ao SaturnoSC!</h1>
+
+                    <div class="caixa-form">
+                        <div class="caixa">
+                            <div class="campo">
+                                <label for="nome">Nome</label> <br>
+                                <input type="nome" id="nome_input" placeholder="Seu nome">
+                            </div>
+                            <div class="campo">
+                                <label for="Data de Nascimento">Data de Nascimento</label> <br>
+                                <input type="date" id="dtnasc">
+                            </div>
+                            <div class="campo">
+                                <label for="CPF">CPF</label> <br>
+                                <input id="Cpf" placeholder="Seu CPF">
+                            </div>
+                            <div class="campo">
+                                <label for="CNPJ">CNPJ</label> <br>
+                                <input id="Cnpj" placeholder="Seu CNPJ">
+                            </div>
+                        </div>
+
+                        <div class="caixa2">
+
+                            <div class="campo">
+                                <label for="email">E-mail</label> <br>
+                                <input type="email" id="email_input" placeholder="email@email.com">
+                            </div>
+                            <div class="campo">
+                                <label for="telefone">Telefone</label> <br>
+                                <input type="tel" id="Telefone" placeholder="Seu telefone">
+                            </div>
+                            <div class="campo">
+                                <label for="password">Senha</label> <br>
+                                <input type="password" id="senha_input" placeholder="************">
+                            </div>
+                            <div class="campo">
+                                <label for="password">Confirme a Senha</label> <br>
+                                <input type="password" id="confirmacao_senha_input" placeholder="************">
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <button onclick="cadastrar()">Enviar</button>
+                    <h5>Já tem uma conta? <a href="./login.html">Entrar</a></h5>
+                </div>
+
+
+                <div class="vaidarbom">
+                    <input type="text" id="teste_input">
+                    <button onclick="augusto()">Enviar</button>
+                </div>
+
+                <!-- <div class="minicontainer">
+                    <h4>Já tem uma conta?</h4>
+                    <div class="barra"><a href="./login.html" class="azinho2"><button>Entre na sua conta
+                                aqui.</button></a></div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<script>
+    function augusto() {
+        var nome1Var = teste_input.value;
+
+        if (nome1Var == "") {
+            
+            return false;
+        }
+
+        fetch("/teste/augusto", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome1Server: nome1Var
+            })
+        }).then(function (resposta) {
+            console.log("Resposta: ", resposta);
+
+            if (resposta.ok) {
+                console.log('Augusto Lindo')
+            } else {
+                throw ("Não deu certo, problema no cadastro, augusto()");
+            }
+        }).catch(function (resposta){
+            console.log(`#ERrO: ${resposta}`);
+        });
+
+        return false;
+    }
+</script>
+
+
+
+<!-- Moon Purple - TEMA -->
+<script>
+    function cadastrar() {
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+
+            // finalizarAguardar();
+            return false;
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                // cardErro.style.display = "block";
+
+                // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                // limparFormulario();
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
+
+</script>

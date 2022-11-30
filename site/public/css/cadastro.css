@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 46.8vmax;
+}
+
+.banner {
+    float: right;
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+
+.banner .container .caixa-formulario{
+    margin-top: 0;
+    width: 600px;
+    float: right;
+}
+
+
+.banner .container .caixa-formulario .caixa-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 700px;
+    flex-direction: row;
+    /* padding-bottom: 40px; */
+}
+
+.banner .container .caixa-formulario .caixa-form .campo {
+   height: 30px;
+   
+}
+.banner .container .caixa-formulario .caixa-form .campo input{
+    background-color: transparent;
+    color: rgba(245, 245, 245);
+    border-bottom: 2px solid #e6bc16;
+}
+.banner .container .caixa-formulario .caixa-form .campo input::placeholder{
+    color: rgba(245, 245, 245, 0.493);
+}
+
+
+.banner .container .caixa-formulario .caixa-form .caixa {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner .container .caixa-formulario .caixa-form .caixa2 {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.banner .container .caixa-formulario button {
+    /* margin: 0; */
+    color: #e6bc16;
+    background-color: transparent;
+    padding: 9px 16px;
+    border: none;
+    border-radius: 5px;
+    /* position: absolute; */
+    /* top: 400px; */
+    border: 2px solid #e6bc16;
+    width: 110px;
+    cursor: pointer;
+    transition: all 0.9s;
+}
+
+.banner .container .caixa-formulario button:hover {
+    border-radius: 20px;
+    transform: scale(1.1);
+    color: #123142;
+    background-color: #e6bc16;
+}
+
+.banner .container .caixa-formulario h5 {
+    padding-top: 17px;
+    color: whitesmoke;
+    font-weight: normal;
+}
+
+.banner .container .caixa-formulario h5 a {
+    color: #e6bc16; 
+}
+
+
+
+
+
+
+
+/* .banner .container .minicontainer .barra {
+    width: 600px;
+}
+.banner .container .minicontainer .barra .azinho2 button{
+    display: flex;
+    // align-items: center; 
+    justify-content: center;
+    margin: 15px 0 0 3px;
+    padding: 9px 16px;
+    background-color: #123142c2 ;
+    color: #e6bc16;
+    border: none;
+    border: 2px solid #e6bc16;
+    border-radius: 5px;
+    top: 500px;
+    width: 210px;
+    cursor: pointer;
+    transition: all 0.9s;
+}
+
+.banner .container .minicontainer .azinho2 button:hover {
+    border-radius: 20px;
+    scale: 1.1;
+    color: #123142;
+    background-color: #e6bc16;
+}
+ */
