@@ -13,12 +13,9 @@ function augusto(req, res) {
     if (nome1 == undefined) {
         res.status(400).send("O teste está indefinido");
     } else {
-        testeModel.augusto(nome1)
-        console.log("ccccccc")
-
-            .then(
-                function (resultado) {
-                    console.log("d")
+        testeModel.augusto(nome1).then(
+            function (resultado) {
+                    console.log("ccccccc")
 
                     res.json(resultado);
                 }
