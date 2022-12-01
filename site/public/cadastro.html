@@ -22,42 +22,42 @@
                         <a href="./index.html"><img src="./img/logoSite.png" width="190"></a>
                     </div>
                     <h1>Bem-vindo ao SaturnoSC!</h1>
-
                     <div class="caixa-form">
                         <div class="caixa">
                             <div class="campo">
-                                <label for="nome">Nome</label> <br>
+                                <label for="nome">Nome</label>
                                 <input type="nome" id="nome_input" placeholder="Seu nome">
                             </div>
                             <div class="campo">
-                                <label for="email">E-mail</label> <br>
+                                <label for="email">E-mail</label>
                                 <input type="email" id="email_input" placeholder="email@email.com">
                             </div>
                         </div>
 
-                        <div class="caixa2">
+                        <div class="caixa">
                             <div class="campo">
-                                <label for="password">Senha</label> <br>
-                                <input type="password" id="senha_input" placeholder="************">
+                                <label for="password">Senha</label>
+                                <input type="password" id="senha_input" placeholder="**************">
                             </div>
                             <div class="campo">
-                                <label for="password">Confirme a Senha</label> <br>
-                                <input type="password" id="confirmacao_senha_input" placeholder="************">
-                            </div>
-
-                            <div class="campo">
-                                <label for="platacao">Você tem uma plantação?</label>
+                                <label for="password">Confirme a Senha</label>
+                                <input type="password" id="confirmacao_senha_input" placeholder="**************">
                             </div>
                         </div>
                     </div>
+                    <div class="botao">
+                        <button onclick="cadastrar()">Enviar</button>
+                        <p>Já tem uma conta? <a href="./login.html">Entrar</a></p>
+                    </div>
 
-                    <br><br>
-                    <button onclick="cadastrar()">Enviar</button>
-                    <h5>Já tem uma conta? <a href="./login.html">Entrar</a></h5>
+                    <div class="pergunta">
+                        <label for="platacao">Deseja cadastrar sua plantação?</label>
+                        <input type="checkbox" id=""><p>(Opcional)</p>
+                    </div>
                 </div>
 
 
-                <div class="vaidarbom">
+                <div class="vaidarbom" style="display: none;">
                     <input type="text" id="teste_input">
                     <button onclick="augusto()">Enviar</button>
                 </div>
