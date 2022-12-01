@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 1s;
 }
 
 body {
@@ -41,7 +42,7 @@ section .banner .container {
     flex-direction: column;
     border: 2px solid var(--clr1);
     border-radius: 8px;
-    background-color: #123142af;
+    background-color: #123142cf;
     padding-top: 20px;
 }
 
@@ -149,7 +150,7 @@ section .banner .container {
 }
 
 .banner .container .caixa-formulario button:hover {
-    border-radius: 20px;
+    border-radius: 10px;
     transform: scale(1.1);
     color: #123142;
     background-color: #e6bc16;
@@ -184,6 +185,7 @@ section .banner .container {
 
 .banner .container .caixa-formulario .pergunta input{
     margin: 0 10px;
+    background-color: var(--clr1);
 }
 
 .banner .container .caixa-formulario .pergunta p{
@@ -192,3 +194,40 @@ section .banner .container {
     font-family: 'Ubuntu';
 }
    
+.banner .container .caixa-formulario .container2{
+    width: 50%;
+    height: 500px;
+    background-color: var(--clr2);
+    position: absolute;
+    bottom: -501px;
+    right: 8%;
+    border-radius: 8px;
+    border: 2px solid var(--clr1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner .container .caixa-formulario .container2 h2{
+    color: var(--clr1);
+    font-family: 'Ubuntu';
+    font-weight: normal;
+}
+
+.banner .container .caixa-formulario .container2 .botoes {
+    width: 35%;
+    height: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner .container .caixa-formulario .container2 .botoes button:nth-child(1){
+    background-color: var(--clr1);
+    color: var(--clr2);
+}
+
+
+
+
