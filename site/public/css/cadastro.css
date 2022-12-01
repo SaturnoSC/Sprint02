@@ -1,44 +1,80 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 section {
-    height: 46.8vmax;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.banner {
-    float: right;
-    padding-top: 30px;
-    padding-bottom: 0;
+section .banner {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fffeee5f;
 }
 
-.banner .container .caixa-formulario{
-    margin-top: 0;
-    width: 600px;
-    float: right;
+section .banner .container {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: #eade125f;
 }
 
+.banner .container .caixa-formulario {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-.banner .container .caixa-formulario .caixa-form{
+    background-color: #aeae;
+}
+.banner .container .caixa-formulario .logo{
+    width: 100%;
+    height: 5%;
+}
+
+.banner .container .caixa-formulario .caixa-form {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 700px;
+    /* width: 700px; */
     flex-direction: row;
-    /* padding-bottom: 40px; */
+    background-color: #553;
 }
 
 .banner .container .caixa-formulario .caixa-form .campo {
-   height: 30px;
-   
+    width: 30%;
+    height: 30px;
+
 }
-.banner .container .caixa-formulario .caixa-form .campo input{
+
+.banner .container .caixa-formulario .caixa-form .campo input {
+    width: 40%;
     background-color: transparent;
     color: rgba(245, 245, 245);
     border-bottom: 2px solid #e6bc16;
 }
-.banner .container .caixa-formulario .caixa-form .campo input::placeholder{
+
+.banner .container .caixa-formulario .caixa-form .campo input::placeholder {
     color: rgba(245, 245, 245, 0.493);
 }
 
@@ -55,14 +91,11 @@ section {
 }
 
 .banner .container .caixa-formulario button {
-    /* margin: 0; */
     color: #e6bc16;
     background-color: transparent;
     padding: 9px 16px;
     border: none;
     border-radius: 5px;
-    /* position: absolute; */
-    /* top: 400px; */
     border: 2px solid #e6bc16;
     width: 110px;
     cursor: pointer;
@@ -77,13 +110,13 @@ section {
 }
 
 .banner .container .caixa-formulario h5 {
-    padding-top: 17px;
+    /* padding-top: 17px; */
     color: whitesmoke;
     font-weight: normal;
 }
 
 .banner .container .caixa-formulario h5 a {
-    color: #e6bc16; 
+    color: #e6bc16;
 }
 
 

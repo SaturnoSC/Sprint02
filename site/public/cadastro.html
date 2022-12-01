@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style1.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
     <link rel="stylesheet" href="./css/cadastro.css">
+    <!-- <link rel="stylesheet" href="./css/cad.css"> -->
     <link rel="icon" href="./img/AAA.png">
     <title>Cadastre-se</title>
 </head>
@@ -29,29 +30,12 @@
                                 <input type="nome" id="nome_input" placeholder="Seu nome">
                             </div>
                             <div class="campo">
-                                <label for="Data de Nascimento">Data de Nascimento</label> <br>
-                                <input type="date" id="dtnasc">
-                            </div>
-                            <div class="campo">
-                                <label for="CPF">CPF</label> <br>
-                                <input id="Cpf" placeholder="Seu CPF">
-                            </div>
-                            <div class="campo">
-                                <label for="CNPJ">CNPJ</label> <br>
-                                <input id="Cnpj" placeholder="Seu CNPJ">
+                                <label for="email">E-mail</label> <br>
+                                <input type="email" id="email_input" placeholder="email@email.com">
                             </div>
                         </div>
 
                         <div class="caixa2">
-
-                            <div class="campo">
-                                <label for="email">E-mail</label> <br>
-                                <input type="email" id="email_input" placeholder="email@email.com">
-                            </div>
-                            <div class="campo">
-                                <label for="telefone">Telefone</label> <br>
-                                <input type="tel" id="Telefone" placeholder="Seu telefone">
-                            </div>
                             <div class="campo">
                                 <label for="password">Senha</label> <br>
                                 <input type="password" id="senha_input" placeholder="************">
@@ -96,7 +80,7 @@
         var nome1Var = teste_input.value;
 
         if (nome1Var == "") {
-            
+
             return false;
         }
 
@@ -116,7 +100,7 @@
             } else {
                 throw ("Não deu certo, problema no cadastro, augusto()");
             }
-        }).catch(function (resposta){
+        }).catch(function (resposta) {
             console.log(`#ERrO: ${resposta}`);
         });
 
@@ -167,7 +151,7 @@
                 setTimeout(() => {
                     window.location = "login.html";
                 }, "2000")
-                
+
                 // limparFormulario();
                 // finalizarAguardar();
             } else {

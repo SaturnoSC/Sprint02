@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-y: hidden;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .banner{
+    width: 90%;
+    height: 80%;
+    background-color: #1221325f;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+section .banner .container{
+    width: 40%;
+    height: 100%;
+}
+
+section .banner .container .caixa-formulario{
+    width: 80%;
+    height: 80%;
+    background-color: aliceblue;
+
+}
+
