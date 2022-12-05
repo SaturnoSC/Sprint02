@@ -1,4 +1,4 @@
-[![All Contributors](https://img.shields.io/badge/contributors_sprint_2-6-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/contributors_sprint_3-3-orange.svg?style=flat-square)](#contributors)
 [![TRELLO FERRAMENTA](https://img.shields.io/badge/-trello-blue)](https://trello.com/b/1c55RnRI/sprint2)
 # NOSSO REPOSITORIO DA SPRINT 3 
 📚  ***Sobre o nosso projeto!***
