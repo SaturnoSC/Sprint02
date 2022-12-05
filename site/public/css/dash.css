@@ -15,6 +15,7 @@ body {
     align-items: center;
     flex-direction: row; */
     background-color: #123142;
+    overflow-y: hidden;
 }
 
 nav {
@@ -35,7 +36,7 @@ nav {
     cursor: pointer;
     transition: all 0.8s;
     position: absolute;
-    right: 96.4%;
+    right: 96.1%;
     top: 20px;
     z-index: 1;
     background-image: url("./../img/icons8-cardápio-240.png ");
@@ -72,7 +73,7 @@ nav .bar {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-
+    /* background-color: #0008ff5f;         */
 }
 
 nav .bar .espaco {
@@ -86,22 +87,6 @@ nav .bar .espaco {
     /* border: 1px pink solid; */
 }
 
-nav .bar .espaco .foto {
-    width: 85px;
-    height: 85px;
-    border-radius: 100%;
-    background-color: #e6bc16af;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav .bar .espaco .foto span {
-    font-size: 6.5em;
-    font-weight: 100;
-}
-
 nav .bar .espaco h2 {
     font-size: 15px;
     font-weight: normal;
@@ -111,10 +96,15 @@ nav .bar .espaco h2 {
 }
 
 nav .bar .espaco p {
-    font-size: 15px;
+    font-size: 1.2em;
     font-family: 'Ubuntu';
     color: #f5f5f5af;
     font-weight: 200;
+}
+
+nav .bar .espaco p:nth-child(2){
+    margin-top: 5px;
+    font-size: 0.9em;
 }
 
 nav .bar .espaco span {
@@ -361,7 +351,7 @@ section .container1 .conteudo .limites .temperatura span,
 
 section .container1 .conteudo .limites .temperatura .barra {
     width: 50%;
-    height: 12px;
+    height: 40px;
     border-radius: 50px;
     background-image: linear-gradient(to left, #ff2424, #0073ff);
     color: #f5f5f5;
@@ -373,9 +363,13 @@ section .container1 .conteudo .limites .temperatura .barra {
     align-items: center;
 }
 
+section .container1 .conteudo .limites .temperatura .barra p{
+    font-size: 0.7em;
+}
+
 section .container1 .conteudo .limites .umidade .barra {
     width: 50%;
-    height: 12px;
+    height: 40px;
     border-radius: 50px;
     background-image: linear-gradient(to left, #0008ff, #00d1f6);
     color: #0040d4;
@@ -389,8 +383,8 @@ section .container1 .conteudo .limites .umidade .barra {
 }
 
 section .container1 .conteudo .limites .umidade .barra p {
-    margin-left: 65px;
-    font-size: 25px;
+    /* margin-left: 65px; */
+    font-size: 0.6em;
     color: #f5f5f5;
 }
 
@@ -442,7 +436,7 @@ section .container1 .conteudo .analitics button {
 }
 
 section .container1 .conteudo .analitics button:hover {
-    transform: scale(1.13);
+    transform: scale(1.03);
     background-color: #123142;
     box-shadow: 0 0 13px 0.5px #e6bc16;
     cursor: pointer;
@@ -450,7 +444,7 @@ section .container1 .conteudo .analitics button:hover {
 
 section .contPrincipal {
     width: 95%;
-    height: 27vmax;
+    height: 50%;
     margin: 0 auto;
     /* background-color: rgba(255, 255, 255, 0.105); */
     display: flex;
@@ -648,3 +642,67 @@ section .contPrincipal .cont1, section .contPrincipal .cont2 {
     transition: all 0.5s;
     /* text-decoration: line-through; */
 }
+
+
+
+
+.quente{
+    animation: quentee 1s infinite alternate;
+}
+
+@keyframes quentee {
+    0%{
+        box-shadow: 0;
+    } 100% {
+        box-shadow: inset 0 0 50px 70px red;
+    }
+}
+
+
+.frio{
+    animation: frioo 1s infinite alternate;
+}
+
+@keyframes frioo {
+    0%{
+        box-shadow: 0;
+    } 100% {
+        box-shadow: inset 0 0 50px 70px rgb(17, 0, 255);
+    }
+}
+
+.ideal{
+    animation: ideall 2s infinite alternate;
+}
+
+@keyframes ideall {
+    0%{
+        box-shadow: 0;
+    } 100% {
+        box-shadow: inset 0 0 50px 20px rgb(0, 255, 34);
+    }
+}
+
+.modalquente, .modalfrio{
+    width: 30%;
+    height: 150px;
+    background-color: #e6bc16;
+    position: absolute;
+    z-index: 4000000;
+    top: 5%;
+    right: 40%;
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalquente p, .modalfrio p{
+    text-align: center;
+    font-size: 1.5em;
+    color:#123142;
+    font-family: 'Ubuntu';
+}
+
+
+

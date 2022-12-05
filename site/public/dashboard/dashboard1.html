@@ -24,14 +24,11 @@
 
     <nav id="nav">
         <div class="logo">
-            <a href="./index.html"><img src="./img/logoIcon.png" alt="" width="110"></a>
+            <a href="./index.html"><img src="../img/logoIcon.png" alt="" width="110"></a>
         </div>
         <div class="bar">
             <div class="espaco">
-                <div class="foto"><span class="material-symbols-outlined">
-                        account_circle
-                    </span></div>
-                <h2 id="nome_usuario"></h2>
+                <p>Olá, <span id="nome_usuario"></span></p>
                 <p>ID: <span id="id_usuario"></span></p>
             </div>
             <div class="botoes">
@@ -46,20 +43,7 @@
                         monitoring
                     </span>Gráficos <span>&ensp;</span></a>
 
-
-
-                <a onclick="mural()" id="botao-3"> <span class="material-symbols-outlined">
-                        history
-                    </span>
-                    Histórico <span>&ensp;</span></a>
-                <!-- <a href=""> botão 4</a> -->
             </div>
-        </div>
-        <div class="saida">
-
-            <a href="../login.html" onclick="limparSessao()"> <span class="material-symbols-outlined">
-                    logout
-                </span>Sair</a>
         </div>
     </nav>
 
@@ -88,7 +72,8 @@
                         <span class="material-symbols-outlined">
                             device_thermostat
                         </span>
-                        <div class="barra">|
+                        <div class="barra">
+                            <p>Temp. adequada 20°C</p>
                         </div>
                         <div class="minmax">
                             <h5>22°<span class="material-symbols-outlined" style="color: red; padding-left: 8px;">
@@ -105,7 +90,7 @@
                             humidity_mid
                         </span>
                         <div class="barra">
-                            <p>|</p>
+                            <p>Umi. adequada 40%</p>
                         </div>
                         <div class="minmax">
                             <h5>60% <span class="material-symbols-outlined" style="color: red;">
@@ -121,20 +106,20 @@
                     <h2>Setores</h2>
                     <div class="grupo">
                         <div class="grupo1">
-                            <button>A2</button>
-                            <button>A6</button>
+                            <button onclick="indispo()">A2</button>
+                            <button onclick="indispo()">A6</button>
                         </div>
                         <div class="grupo2">
-                            <button>A3</button>
-                            <button>A7</button>
+                            <button onclick="indispo()">A3</button>
+                            <button onclick="indispo()">A7</button>
                         </div>
                         <div class="grupo3">
-                            <button>A4</button>
-                            <button>A8</button>
+                            <button onclick="indispo()">A4</button>
+                            <button onclick="indispo()">A8</button>
                         </div>
                         <div class="grupo4">
-                            <button>A5</button>
-                            <button>A9</button>
+                            <button onclick="indispo()">A5</button>
+                            <button onclick="indispo()">A9</button>
                         </div>
                     </div>
                 </div>
@@ -174,147 +159,28 @@
 
         <div class="botoesConfirma">
             <a href="../index.html">Sim</a>
-            <a href="./dashboard.html">Não</a>
+            <a href="./dashboard1.html">Não</a>
         </div>
     </section>
 
-    <!-- Histórico -->
 
-    <section class="terceiraSection" id="section-thre">
-        <div class="sec3Titulo" id="sec3-titulo">
-            <h2>Histórico de alertas</h2>
-        </div>
-        <div class="primeiraParte" id="primeira-parte">
-
-            <!-- 1 -->
-            <div class="info" id="info-1">
-
-                <div class="lido" id="lido-1"><span class="material-symbols-outlined" id="lido-icon-1" onclick="ler()">
-                        mark_as_unread
-                    </span>
-                    <p>Marcar <br> como lido</p>
-                </div>
-
-
-                <div class="mensagem">
-                    <p id="p-mensagem-1"><b> 18/10/2022 - 12h00: Temperatura 19°C e Umidade 45%. </b><br> Temperatura e
-                        umidade estão nos níveis ideais </p>
-                </div>
-
-
-                <div class="apagar" id="apagar-1">
-                    <span class="material-symbols-outlined" id="apagar-icon-1" onclick="apagar()">
-                        delete
-                    </span>
-                    <p>Deletar</p>
-                </div>
-            </div>
-
-            <!-- 2 -->
-            <div class="info" id="info-2">
-
-                <div class="lido" id="lido-2"><span class="material-symbols-outlined" id="lido-icon-2"
-                        onclick="lerDois()">
-                        mark_as_unread
-                    </span>
-                    <p>Marcar <br> como lido</p>
-                </div>
-
-
-                <div class="mensagem">
-                    <p id="p-mensagem-2"><b> 18/10/2022 - 12h30: Temperatura 16°C e Umidade 52%. </b><br> CUIDADO! A
-                        temperatura está abaixo do ideal, necessário aumentar 2°C. Umidade está no nível ideal </p>
-                </div>
-
-
-                <div class="apagar" id="apagar-2">
-                    <span class="material-symbols-outlined" id="apagar-icon-2" onclick="apagarDois()">
-                        delete
-                    </span>
-                    <p>Deletar</p>
-                </div>
-            </div>
-
-            <!-- 3 -->
-            <div class="info" id="info-3">
-
-                <div class="lido" id="lido-3"><span class="material-symbols-outlined" id="lido-icon-3"
-                        onclick="lerTres()">
-                        mark_as_unread
-                    </span>
-                    <p>Marcar <br> como lido</p>
-                </div>
-
-
-                <div class="mensagem">
-                    <p id="p-mensagem-3"><b> 18/10/2022 - 13h00: Temperatura 24°C e Umidade 67%. </b><br> CUIDADO! A
-                        temperatura está acima do ideal, necessário reduzir em 2°C. CUIDADO! Umidade está acima do
-                        ideal, necessário reduzir em 7% </p>
-                </div>
-
-
-                <div class="apagar" id="apagar-3">
-                    <span class="material-symbols-outlined" id="apagar-icon-3" onclick="apagarTres()">
-                        delete
-                    </span>
-                    <p>Deletar</p>
-                </div>
-            </div>
-
-            <!-- 4 -->
-            <div class="info" id="info-4">
-
-                <div class="lido" id="lido-4"><span class="material-symbols-outlined" id="lido-icon-4"
-                        onclick="lerQuatro()">
-                        mark_as_unread
-                    </span>
-                    <p>Marcar <br> como lido</p>
-                </div>
-
-
-                <div class="mensagem">
-                    <p id="p-mensagem-4"><b> 18/10/2022 - 13h45: Temperatura 22°C e Umidade 62%. </b><br>Temperatura e
-                        está no níveil ideal. CUIDADO! Umidade está acima do ideal, necessário reduzir em 2% </p>
-                </div>
-
-
-                <div class="apagar" id="apagar-4">
-                    <span class="material-symbols-outlined" id="apagar-icon-4" onclick="apagarQuatro()">
-                        delete
-                    </span>
-                    <p>Deletar</p>
-                </div>
-            </div>
-
-            <!-- 5 -->
-            <div class="info" id="info-5">
-
-                <div class="lido" id="lido-5"><span class="material-symbols-outlined" id="lido-icon-5"
-                        onclick="lerCinco()">
-                        mark_as_unread
-                    </span>
-                    <p>Marcar <br> como lido</p>
-                </div>
-
-
-                <div class="mensagem">
-                    <p id="p-mensagem-5"><b> 01/05/2022 - 14h00: Temperatura 19°C e Umidade 56%. </b><br> Temperatura e
-                        umidade estão nos níveis ideais </p>
-                </div>
-
-
-                <div class="apagar" id="apagar-5">
-                    <span class="material-symbols-outlined" id="apagar-icon-5" onclick="apagarCinco()">
-                        delete
-                    </span>
-                    <p>Deletar</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
+    <div class="modalquente" id="modal_quente">
+        <p>A temperatura e/ou a umidade aumentou!<br> Verifique o <span>SETOR A1</span> urgentemente!</p>
+    </div>
+    <div class="modalfrio" id="modal_frio">
+        <p>A temperatura e/ou a umidade caiu! <br> Verifique o <span>SETOR A1</span> urgentemente!</p>
+    </div>
 </body>
+
+
+<script>
+    function indispo() {
+        alert('Setor não configurado!')
+    }
+</script>
+
+
+
 <!-- chartJS -->
 <!-- // Esses scripts vão depois que fecha o BODY e antes de fechar o html -->
 <script>
@@ -551,6 +417,8 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+
+
     function plotarGrafico(resposta, idSetor) {
 
         console.log('iniciando plotagem do gráfico...');
@@ -709,6 +577,23 @@
                     temperaturaAtual.innerHTML = JSON.stringify(novoRegistro[0].temperatura) 
                     umidadeAtual.innerHTML = JSON.stringify(novoRegistro[0].umidade) 
 
+                    if (Number(temperaturaAtual.innerHTML) >= 27.3 || Number(umidadeAtual.innerHTML) >= 70) {
+                        document.getElementById('section-one').classList.remove("ideal")
+                        document.getElementById('section-one').classList.add("quente")
+                        document.getElementById('modal_quente').style.display = "flex"
+
+                    } else if (Number(temperaturaAtual.innerHTML) <= 26.5 || Number(umidadeAtual.innerHTML) <= 60.2) {
+                        document.getElementById('section-one').classList.remove("ideal")
+                        document.getElementById('section-one').classList.add("frio")
+                        document.getElementById('modal_frio').style.display = "flex"
+
+                    } else {
+                        document.getElementById('section-one').classList.remove("quente")
+                        document.getElementById('section-one').classList.remove("frio")
+                        document.getElementById('section-one').classList.add("ideal")
+                        document.getElementById('modal_frio').style.display = "none"
+                        document.getElementById('modal_quente').style.display = "none"
+                    }
 
                     let avisoCaptura = document.getElementById(`avisoCaptura${idSetor}`)
                     // avisoCaptura.innerHTML = ""
@@ -767,7 +652,7 @@
 
     var sectionOne = document.getElementById("section-one")
     var sectionTwo = document.getElementById("section-two")
-    var sectionThre = document.getElementById("section-thre")
+    // var sectionThre = document.getElementById("section-thre")
 
     var botao1 = document.getElementById("botao-1")
     var botao2 = document.getElementById("botao-2")
@@ -777,7 +662,7 @@
     function dashboard() {
         sectionOne.style.display = "flex"
         sectionTwo.style.display = "none"
-        sectionThre.style.display = "none"
+        // sectionThre.style.display = "none"
 
         botao1.style.backgroundColor = "#ffffff21"
         botao1.style.opacity = "0.8"
@@ -793,7 +678,7 @@
     function analytics() {
         sectionOne.style.display = "none"
         sectionTwo.style.display = "flex"
-        sectionThre.style.display = "none"
+        // sectionThre.style.display = "none"
 
         botao1.style.backgroundColor = "#123142"
         botao1.style.opacity = "1"
@@ -807,22 +692,22 @@
         numSection = 0
     }
 
-    function mural() {
-        sectionOne.style.display = "none"
-        sectionTwo.style.display = "none"
-        sectionThre.style.display = "flex"
+    // function mural() {
+    //     sectionOne.style.display = "none"
+    //     sectionTwo.style.display = "none"
+    //     // sectionThre.style.display = "flex"
 
-        botao1.style.opacity = "1"
-        botao1.style.backgroundColor = "#123142"
+    //     botao1.style.opacity = "1"
+    //     botao1.style.backgroundColor = "#123142"
 
-        botao2.style.opacity = "1"
-        botao2.style.backgroundColor = "#123142"
+    //     botao2.style.opacity = "1"
+    //     botao2.style.backgroundColor = "#123142"
 
-        botao3.style.backgroundColor = "#ffffff21"
-        botao3.style.opacity = "0.8"
+    //     botao3.style.backgroundColor = "#ffffff21"
+    //     botao3.style.opacity = "0.8"
 
-        numSection = 1
-    }
+    //     numSection = 1
+    // }
 
 
     var numBar = 1
@@ -840,7 +725,7 @@
         var cont1Umi = document.getElementById("cont1-umi")
 
         var avisoWarning = document.getElementById("warning")
-        var sec3Title = document.getElementById("sec3-titulo")
+        // var sec3Title = document.getElementById("sec3-titulo")
         var lido1 = document.getElementById("lido-1")
         var apagar1 = document.getElementById("apagar-1")
         var lido2 = document.getElementById("lido-2")
@@ -862,11 +747,11 @@
             navBar.style.left = "0"
             sectionOne.style.width = "85%"
             sectionTwo.style.width = "85%"
-            sectionThre.style.width = "85%"
+            // sectionThre.style.width = "85%"
 
             sectionOne.style.borderRadius = "0"
             sectionTwo.style.borderRadius = "0"
-            sectionThre.style.borderRadius = "0"
+            // sectionThre.style.borderRadius = "0"
 
             // Containers das section 1
             sec1Cont1.style.width = "85%"
@@ -881,7 +766,7 @@
 
 
             // Configs da terceira sectio (Hitórico)
-            sec3Title.style.width = "80%"
+            // sec3Title.style.width = "80%"
             primeiraParte.style.width = "70%"
             lido1.style.display = "none"
             apagar1.style.display = "none"
@@ -900,11 +785,11 @@
             navBar.style.left = "-14%"
             sectionOne.style.width = "95%"
             sectionTwo.style.width = "95%"
-            sectionThre.style.width = "95%"
+            // sectionThre.style.width = "95%"
 
             sectionOne.style.borderRadius = "30px 0 0 30px"
             sectionTwo.style.borderRadius = "30px 0 0 30px"
-            sectionThre.style.borderRadius = "30px 0 0 30px"
+            // sectionThre.style.borderRadius = "30px 0 0 30px"
 
             // Containers das section 1
             sec1Cont1.style.width = "95%"
@@ -920,7 +805,7 @@
 
 
             // Configs da terceira sectio (Hitórico)
-            sec3Title.style.width = "95%"
+            // sec3Title.style.width = "95%"
             primeiraParte.style.width = "90%"
             lido1.style.display = "flex"
             apagar1.style.display = "flex"
@@ -934,7 +819,7 @@
             apagar5.style.display = "flex"
 
 
-            menuBar.style.right = "96.4%"
+            menuBar.style.right = "96.1%"
             numBar = 1
         }
 
