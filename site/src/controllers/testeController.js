@@ -7,13 +7,14 @@ function testar(req, res) {
 
 function augusto(req, res) {
     var nome1 = req.body.nome1Server;
+    var metragem = req.body.metragemServer;
     console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
 
 
-    if (nome1 == undefined) {
+    if (nome1 == undefined || metragem == undefined) {
         res.status(400).send("O teste está indefinido");
     } else {
-        testeModel.augusto(nome1).then(
+        testeModel.augusto(nome1, metragem).then(
             function (resultado) {
                     console.log("ccccccc")
 

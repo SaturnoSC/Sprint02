@@ -100,8 +100,9 @@
 <script>
     function augusto() {
         var nome1Var = nome_planta_input.value;
+        var metragemVar = metragem_input.value
 
-        if (nome1Var == "") {
+        if (nome1Var == "" || metragemVar == "") {
 
             return false;
         }
@@ -112,7 +113,8 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                nome1Server: nome1Var
+                nome1Server: nome1Var,
+                metragemServer: metragemVar
             })
         }).then(function (resposta) {
             console.log("Resposta: ", resposta);

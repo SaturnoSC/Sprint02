@@ -16,7 +16,7 @@ a {
 
 section {
     width: 100%;
-    height: 46.7vmax;
+    height: 100vh;
     padding-bottom: 10px;
     background-image: url('./../img/fundo6.jpg  ');
     background-size: cover;
@@ -33,7 +33,7 @@ nav {
     border: 0;
     border-bottom: 1.5px solid #E6BC16;
     background-color: #1231427e;
-    transition: all ease-in 1s;
+    transition: all ease-in 0.5s;
 }
 
 nav:hover{
@@ -200,7 +200,7 @@ nav .bar .aqui, .bar2 .aqui{
 
 /* Hover (Quando passar o cursor do mouse) */
 .principal button:hover {
-    transform: scale(1.1);
+    box-shadow: 1px 1px 10px #e6bc16;
 }
 
 /* QrCode do rodapé*/
