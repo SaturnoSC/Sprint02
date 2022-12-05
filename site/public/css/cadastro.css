@@ -41,7 +41,7 @@ section .banner .container {
     align-items: center;
     flex-direction: column;
     border: 2px solid var(--clr1);
-    border-radius: 8px;
+    border-radius: 9px;
     background-color: #123142cf;
     padding-top: 20px;
 }
@@ -113,12 +113,20 @@ section .banner .container {
     background-color: transparent;
     color: rgba(245, 245, 245);
     border-bottom: 2px solid #e6bc16;
-    color: #e6bc16dF;
+    /* border-radius: 5px; */
+    color: whitesmoke;
     font-family: 'Ubuntu';
 }
 
 .banner .container .caixa-formulario .caixa-form .campo input::placeholder {
     color: rgba(245, 245, 245, 0.493);
+}
+
+.banner .container .caixa-formulario .caixa-form .caixa  .campo input:focus {
+    scale: 1.06;
+    border-radius: 7px;
+    border: 2px solid #e6bc16;
+    color: #e6bc16dF;
 }
 
 
@@ -165,6 +173,10 @@ section .banner .container {
 
 .banner .container .caixa-formulario .botao a{
     color: var(--clr1);
+}
+
+.banner .container .caixa-formulario .botao a:hover{
+    color: whitesmoke;
 }
 
 
