@@ -19,7 +19,7 @@
 
 </head>
 
-<body onload="obterDadosGraficos(7)">
+<body onload="obterDadosGraficos()">
     <div class="teste" id="menu-bar" onclick="navbar()"></div>
 
     <nav id="nav">
@@ -313,7 +313,12 @@
 
         </div>
     </section>
-
+    <div class="modalquente" id="modal_quente">
+        <p>A temperatura e/ou a umidade aumentou!<br> Verifique o <span>SETOR A1</span> urgentemente!</p>
+    </div>
+    <div class="modalfrio" id="modal_frio">
+        <p>A temperatura e/ou a umidade caiu! <br> Verifique o <span>SETOR A1</span> urgentemente!</p>
+    </div>
 </body>
 <!-- chartJS -->
 <!-- // Esses scripts vão depois que fecha o BODY e antes de fechar o html -->
@@ -551,6 +556,8 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+
+
     function plotarGrafico(resposta, idSetor) {
 
         console.log('iniciando plotagem do gráfico...');
@@ -709,6 +716,23 @@
                     temperaturaAtual.innerHTML = JSON.stringify(novoRegistro[0].temperatura) 
                     umidadeAtual.innerHTML = JSON.stringify(novoRegistro[0].umidade) 
 
+                    if (Number(temperaturaAtual.innerHTML) >= 27.3 || Number(umidadeAtual.innerHTML) >= 70) {
+                        document.getElementById('section-one').classList.remove("ideal")
+                        document.getElementById('section-one').classList.add("quente")
+                        document.getElementById('modal_quente').style.display = "flex"
+
+                    } else if (Number(temperaturaAtual.innerHTML) <= 26.5 || Number(umidadeAtual.innerHTML) <= 60.2) {
+                        document.getElementById('section-one').classList.remove("ideal")
+                        document.getElementById('section-one').classList.add("frio")
+                        document.getElementById('modal_frio').style.display = "flex"
+
+                    } else {
+                        document.getElementById('section-one').classList.remove("quente")
+                        document.getElementById('section-one').classList.remove("frio")
+                        document.getElementById('section-one').classList.add("ideal")
+                        document.getElementById('modal_frio').style.display = "none"
+                        document.getElementById('modal_quente').style.display = "none"
+                    }
 
                     let avisoCaptura = document.getElementById(`avisoCaptura${idSetor}`)
                     // avisoCaptura.innerHTML = ""

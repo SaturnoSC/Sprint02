@@ -648,3 +648,67 @@ section .contPrincipal .cont1, section .contPrincipal .cont2 {
     transition: all 0.5s;
     /* text-decoration: line-through; */
 }
+
+
+
+
+.quente{
+    animation: quentee 1s infinite alternate;
+}
+
+@keyframes quentee {
+    0%{
+        box-shadow: 0;
+    } 100% {
+        box-shadow: inset 0 0 50px 70px red;
+    }
+}
+
+
+.frio{
+    animation: frioo 1s infinite alternate;
+}
+
+@keyframes frioo {
+    0%{
+        box-shadow: 0;
+    } 100% {
+        box-shadow: inset 0 0 50px 70px rgb(17, 0, 255);
+    }
+}
+
+.ideal{
+    animation: ideall 2s infinite alternate;
+}
+
+@keyframes ideall {
+    0%{
+        box-shadow: 0;
+    } 100% {
+        box-shadow: inset 0 0 50px 20px rgb(0, 255, 34);
+    }
+}
+
+.modalquente, .modalfrio{
+    width: 30%;
+    height: 150px;
+    background-color: #e6bc16;
+    position: absolute;
+    z-index: 4000000;
+    top: 5%;
+    right: 40%;
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalquente p, .modalfrio p{
+    text-align: center;
+    font-size: 1.5em;
+    color:#123142;
+    font-family: 'Ubuntu';
+}
+
+
+
