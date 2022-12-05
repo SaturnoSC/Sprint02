@@ -52,40 +52,7 @@
 
                     <div class="pergunta">
                         <label for="platacao">Deseja cadastrar sua plantação?</label>
-                        <input type="checkbox" id="marcador_input" onchange="mostrarCadPlanta()">
-                        <p>(Opcional)</p>
-                    </div>
-
-                    <div class="container2" id="cad_plantacao_div">
-                        <h2>Cadastro da plantação</h2>
-                        <div class="caixa-form">
-                            <div class="caixa">
-                                <div class="campo">
-                                    <label for="password">Nome</label>
-                                    <input type="text" id="nome_planta_input" placeholder="Nome da plantação
-                                    ">
-                                </div>
-                                <div class="campo">
-                                    <label for="password">Metragem</label>
-                                    <input type="number" id="metragem_input" placeholder="192 M²">
-                                </div>
-                            </div>
-                            <div class="caixa">
-                                <div class="campo">
-                                    <label for="password">Tipo</label>
-                                    <input type="text" id="tipo_input" placeholder="Tipo de café da plantação">
-                                </div>
-                                <div class="campo">
-                                    <label for="password">CNPJ</label>
-                                    <input type="number" id="cnpj_input" placeholder="99.239.589/0001-42">
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="botoes">
-                            <button onclick="augusto()">Cadastrar</button>
-                            <button onclick="fecharCadPlanta()">Cancelar</button>
-                        </div>
+                        <a href="http://www.chat.whastapp.com/LuSzDn0PGFmJEJlodLQKrq">Clique aqui!</a>
                     </div>
                 </div>  
             </div>
@@ -96,43 +63,6 @@
 </html>
 
 <script src="./js/cadastro.js"></script>
-
-<script>
-    function augusto() {
-        var nome1Var = nome_planta_input.value;
-        var metragemVar = metragem_input.value
-
-        if (nome1Var == "" || metragemVar == "") {
-
-            return false;
-        }
-
-        fetch("/teste/augusto", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                nome1Server: nome1Var,
-                metragemServer: metragemVar
-            })
-        }).then(function (resposta) {
-            console.log("Resposta: ", resposta);
-
-            if (resposta.ok) {
-                console.log('Augusto Lindo')
-            } else {
-                throw ("Não deu certo, problema no cadastro, augusto()");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERrO: ${resposta}`);
-        });
-
-        return false;
-    }
-</script>
-
-
 
 <!-- Moon Purple - TEMA -->
 <script>
@@ -145,7 +75,7 @@
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-
+            alert('Verifique se os campos foram preenchidos corretamente!');
             // finalizarAguardar();
             return false;
         }
@@ -172,9 +102,9 @@
 
                 // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-                setTimeout(() => {
+                setTimeout(() => { alert('Usuário cadastrado com sucesso!'),
                     window.location = "login.html";
-                }, "2000")
+                }, 0)
 
                 // limparFormulario();
                 // finalizarAguardar();

@@ -200,10 +200,16 @@ section .banner .container {
     background-color: var(--clr1);
 }
 
-.banner .container .caixa-formulario .pergunta p{
+.banner .container .caixa-formulario .pergunta a{
+    padding-left: 1%;
     font-size: 0.86em;
-    color: #f5f5f55f;
+    /* text-decoration: none; */
+    color: whitesmoke;
     font-family: 'Ubuntu';
+}
+
+.banner .container .caixa-formulario .pergunta a:hover{
+    color: #e6bc16;
 }
    
 .banner .container .caixa-formulario .container2{

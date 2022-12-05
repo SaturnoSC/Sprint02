@@ -95,6 +95,8 @@
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");
+                alert("Verifique se os campos foram preenchidos corretamente!")
+
 
                 resposta.text().then(texto => {
                     console.error(texto);
