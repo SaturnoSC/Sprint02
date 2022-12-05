@@ -13,7 +13,11 @@ function validarSessao() {
 
         // finalizarAguardar();
     } else {
-        window.location = "../login.html";
+        alert("Você precisa estar logado para acessar essa área")
+        setTimeout(() => {
+            window.location = "../login.html";
+            
+        }, 0);
     }
 }
 

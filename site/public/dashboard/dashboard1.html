@@ -10,6 +10,8 @@
     <link rel="icon" href="../img/AAA.png">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- linkando "funcoes" para funcionar o limpar sessão ao clicar em sair e validar se o usuario está logado -->
+    <script src="../js/funcoes.js"></script>
 
     <!-- Links dos icones -->
     <link rel="stylesheet"
@@ -55,7 +57,7 @@
         </div>
         <div class="saida">
 
-            <a href="./login.html"> <span class="material-symbols-outlined">
+            <a href="../login.html" onclick="limparSessao()"> <span class="material-symbols-outlined">
                     logout
                 </span>Sair</a>
         </div>
@@ -458,6 +460,7 @@
 
 <!-- api chartJS -->
 <script>
+    validarSessao()
     let proximaAtualizacao;
 
     window.onload = obterDadosGraficos();
@@ -486,7 +489,7 @@
     //             elementoAtual.classList.remove("display-block")
     //         }
     //         elementoAtual.classList.add("display-none")
-            
+
     //         // alterando estilo do botão
     //         let btnAtual = document.getElementById(`btnAquario${i}`)
     //         if (btnAtual.classList.contains("btn-pink")) {
@@ -494,12 +497,12 @@
     //         }
     //         btnAtual.classList.add("btn-white")
     //     }
-        
+
     //     // exibindo - ou não - o gráfico
     //     let graficoExibir = document.getElementById(`grafico${idSetor}`)
     //     graficoExibir.classList.remove("display-none")
     //     graficoExibir.classList.add("display-block")
-        
+
     //     // alterando estilo do botão
     //     let btnExibir = document.getElementById(`btnAquario${idSetor}`)
     //     btnExibir.classList.remove("btn-white")
@@ -596,37 +599,37 @@
             type: 'line',
             data: dados,
             options: {
-            scales: {
-                x: {
-                    grid: {
-                        color: '#99999944'
+                scales: {
+                    x: {
+                        grid: {
+                            color: '#99999944'
+                        },
+
+                        ticks: {
+                            color: '#f5f5f5dd',
+                        },
+
+
+
                     },
 
-                    ticks: {
-                        color: '#f5f5f5dd',
-                    },
+                    y: {
+                        grid: {
+                            color: '#99999944'
+                        },
+
+                        ticks: {
+                            color: '#f5f5f5dd'
+                        }
+                    }
+
 
 
 
                 },
+                color: '#f5f5f5dd'
 
-                y: {
-                    grid: {
-                        color: '#99999944'
-                    },
-
-                    ticks: {
-                        color: '#f5f5f5dd'
-                    }
-                }
-
-
-
-
-            },
-            color: '#f5f5f5dd'
-
-        }
+            }
         };
 
         // Adicionando gráfico criado em div na tela
@@ -701,7 +704,7 @@
 
 <script>
 
-    
+
 
     id_usuario.innerHTML = sessionStorage.ID_USUARIO
     nome_usuario.innerHTML = sessionStorage.NOME_USUARIO
