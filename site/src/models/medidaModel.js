@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idAquario, limite_linhas) {
+function buscarUltimasMedidas(idSetor, limite_linhas) {
 
     instrucaoSql = ''
 
@@ -8,10 +8,10 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
         instrucaoSql = `select top ${limite_linhas}
         dht11_temperatura as temperatura, 
         dht11_umidade as umidade,  
-                        momento,
-                        FORMAT(momento, 'HH:mm:ss') as momento_grafico
+                        datahora,
+                        FORMAT(datahora, 'HH:mm:ss') as momento_grafico
                     from medida
-                    where fk_aquario = ${idAquario}
+                    where fkSetor = ${idSetor}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select 
@@ -31,7 +31,7 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal(idAquario) {
+function buscarMedidasEmTempoReal(idSetor) {
 
     instrucaoSql = ''
 
@@ -39,9 +39,9 @@ function buscarMedidasEmTempoReal(idAquario) {
         instrucaoSql = `select top 1
         dht11_temperatura as temperatura, 
         dht11_umidade as umidade,  
-                        CONVERT(varchar, momento, 108) as momento_grafico, 
-                        fk_aquario 
-                        from medida where fk_aquario = ${idAquario} 
+                        CONVERT(varchar, datahora, 108) as momento_grafico, 
+                        fkSetor 
+                        from medida where fkSetor = ${idSetor} 
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
