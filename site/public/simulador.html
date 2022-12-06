@@ -44,6 +44,9 @@
                         <option value="1">Arábica</option>
                         <option value="2">Conilon</option>
                         <option value="3">Robusta</option>
+                        <option value="4">Catuaí</option>
+                        <option value="5">Arábica Duro</option>
+                        <option value="6">Bourbon</option>
                     </select>
                 </div>
                 <button onclick="analise()" class="botao">Simular</button>
@@ -74,9 +77,8 @@
                 <h3>Simulador financeiro</h3>
                 <a href="./simulador.html">Faça agora mesmo uma simulação conosco</a>
             </div>
-            
             <div class="qrCode">
-                <img src="./imagens/logodoQRcode.png" alt="Código QR para entra em contato conosco" width="130vh">
+                <img src="./img/logodoQRcode.png" alt="Código QR para entra em contato conosco" width="130vh">
             </div>
         </div>
         <div class="final">
@@ -98,6 +100,9 @@
         tipo == 1
         tipo == 2
         tipo == 3
+        tipo == 4
+        tipo == 5
+        tipo == 6
 
         // VALORES
         var servico = 10000
@@ -112,6 +117,25 @@
 
         var producaoR = 230 //quantidade de m² necessarias para produzir uma saca
         var robusta = 686 //valor da saca
+
+
+
+
+
+
+
+        // NOVOS CAFÉS QUE ISERI HOJE 01-12
+
+        var producaoCa = 238 //quantidade de m² necessarias para produzir uma saca
+        var catuai = 2300 // valor da saca
+
+        var producaoAd = 350 //quantidade de m² necessarias para produzir uma saca
+        var arabicad = 982 // valor da saca
+
+        var producaoB = 264 //quantidade de m² necessarias para produzir uma saca
+        var bourbon = 2300 // valor da saca
+
+
 
         // 369m² para produzir uma saca , dividir o tamanho da fazendo por 
         // esse valor para saber a quantidade de sacas produzidas pela fazenda
@@ -153,7 +177,40 @@
             o lucro médio de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <span style="color: red; font-weight: bold;">${((perda1 + perda2) / 2).toFixed(2)}</span>. 
             Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, no mês consecutivo com a redução da 
             perda o seu lucro será de: R$ <span style="color: #98FB98; font-weight: bold;">${(ganho * 0.90).toFixed(2)}</span>.</p>`
-           }
+            }
+
+            if (tipo == 4) {
+                var ganho = (tamanho / producaoCa) * catuai
+                var perda1 = ((tamanho / producaoCa) * catuai) * 0.20
+                var perda2 = ((tamanho / producaoCa) * catuai) * 0.35
+
+                resultado.innerHTML = `<p style="color: #e6bc16; font-size: 18px;">Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
+            o lucro médio de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <span style="color: red; font-weight: bold;">${((perda1 + perda2) / 2).toFixed(2)}</span>. 
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, no mês consecutivo com a redução da 
+            perda o seu lucro será de: R$ <span style="color: #98FB98; font-weight: bold;">${(ganho * 0.90).toFixed(2)}</span>.</p>`
+            }
+
+            if (tipo == 5) {
+                var ganho = (tamanho / producaoAd) * arabicad
+                var perda1 = ((tamanho / producaoAd) * arabicad) * 0.20
+                var perda2 = ((tamanho / producaoAd) * arabicad) * 0.35
+
+                resultado.innerHTML = `<p style="color: #e6bc16; font-size: 18px;">Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
+            o lucro médio de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <span style="color: red; font-weight: bold;">${((perda1 + perda2) / 2).toFixed(2)}</span>. 
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, no mês consecutivo com a redução da 
+            perda o seu lucro será de: R$ <span style="color: #98FB98; font-weight: bold;">${(ganho * 0.90).toFixed(2)}</span>.</p>`
+            }
+
+            if (tipo == 6) {
+                var ganho = (tamanho / producaoB) * bourbon
+                var perda1 = ((tamanho / producaoB) * bourbon) * 0.20
+                var perda2 = ((tamanho / producaoB) * bourbon) * 0.35
+
+                resultado.innerHTML = `<p style="color: #e6bc16; font-size: 18px;">Levando em consideração que a perda média da safra é de 28%, atualmente você está tendo 
+            o lucro médio de: R$ ${(ganho - ((perda1 + perda2) / 2)).toFixed(2)} com a perda de <span style="color: red; font-weight: bold;">${((perda1 + perda2) / 2).toFixed(2)}</span>. 
+            Nosso orçamento será de R$ ${implementacao} para a disponibilização dos equipamentos e serviços, no mês consecutivo com a redução da 
+            perda o seu lucro será de: R$ <span style="color: #98FB98; font-weight: bold;">${(ganho * 0.90).toFixed(2)}</span>.</p>`
+            }
         }
     }
 </script>
