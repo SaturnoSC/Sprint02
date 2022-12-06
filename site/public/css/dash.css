@@ -703,6 +703,74 @@ section .contPrincipal .cont1, section .contPrincipal .cont2 {
     color:#123142;
     font-family: 'Ubuntu';
 }
+.menTu{
+    width: 8%;
+    height: 8%;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: absolute;
+}
+
+.menTu span{
+    color: #e6bc16;
+    font-size: 2.8em;
+}
+
+.navTablet {
+    width: 30%;
+    height: 40vh;
+    position: absolute;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 
+@media only screen and (max-width: 1060px) {
+    .teste{
+        display: none;
+    }
+    .menTu{
+        display: flex;
+    }
 
+
+    section .container1 .conteudo .limites,
+    .cont2{
+        display: none;
+    }
+    section .container1{
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+        /* background-color: blueviolet; */
+    }
+    section .container1 .conteudo {
+        height: 70%;
+        align-items: center;
+        justify-content: space-evenly;
+        /* background-color: #ffffff5f; */
+    }
+
+    section .container1 .conteudo .temp,
+    section .container1 .conteudo .umi{
+        width: 25%;
+        height: 23vh;
+    }
+
+    section .contPrincipal{
+        width: 75% !important;
+        height: 30vh !important;
+    }
+
+    .contPrincipal .cont1{
+        width: 90% !important;
+        height: 40vh !important;
+    }
+
+}

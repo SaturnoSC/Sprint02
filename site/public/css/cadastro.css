@@ -30,7 +30,6 @@ section .banner {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /* background-color: #fffeee5f; */
 }
 
 section .banner .container {
@@ -246,6 +245,23 @@ section .banner .container {
     color: var(--clr2);
 }
 
+
+
+@media only screen and (max-width: 1060px){
+    section .banner {
+        width: 85%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    section .banner .container{
+        width: 100%;
+    }
+}
 
 
 

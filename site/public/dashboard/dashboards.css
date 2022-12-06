@@ -270,3 +270,12 @@ body {
 .display-block {
   display: block;
 }
+
+
+
+
+@media only screen and (max-width: 1060px) {
+  .limite{
+    display: none;
+  }
+}

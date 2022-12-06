@@ -21,6 +21,21 @@
 
 <body onload="obterDadosGraficos()">
     <div class="teste" id="menu-bar" onclick="navbar()"></div>
+    <div class="menTu">
+        <span class="material-symbols-outlined" onclick="menuTablet()">
+            menu
+        </span>
+    </div>
+
+    <div class="navTablet">
+        <div class="nome">
+            <p>Olá, <span id="nome_usuario"></span></p>
+            <p>ID: <span id="id_usuario"></span></p>
+        </div>
+        <div class="link">
+            <a onclick="analytics()" id="botao-2"><span class="material-symbols-outlined"> home</span>Início <span>&ensp;</span></a>
+        </div>
+    </div>
 
     <nav id="nav">
         <div class="logo">
@@ -28,8 +43,8 @@
         </div>
         <div class="bar">
             <div class="espaco">
-                <p>Olá, <span id="nome_usuario"></span></p>
-                <p>ID: <span id="id_usuario"></span></p>
+                <p>Olá, <span id="nome_usuarioo"></span></p>
+                <p>ID: <span id="id_usuarioo"></span></p>
             </div>
             <div class="botoes">
                 <!-- BOTÃO 1 -->
@@ -172,6 +187,12 @@
     </div>
 </body>
 
+<script>
+    function menuTablet() {
+
+    }
+</script>
+
 
 <script>
     function indispo() {
@@ -313,6 +334,7 @@
         document.getElementById('ChartLinhas'),
         config
     );
+
     let Barras = new Chart(
         document.getElementById('ChartBarras'),
         config2
@@ -398,8 +420,8 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    temperaturaAtual.innerHTML = JSON.stringify(resposta[0].temperatura) 
-                    umidadeAtual.innerHTML = JSON.stringify(resposta[0].umidade) 
+                    temperaturaAtual.innerHTML = JSON.stringify(resposta[0].temperatura)
+                    umidadeAtual.innerHTML = JSON.stringify(resposta[0].umidade)
 
                     resposta.reverse();
 
@@ -574,15 +596,15 @@
                     console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
                     console.log(`Dados atuais do gráfico:`);
                     console.log(dados);
-                    temperaturaAtual.innerHTML = JSON.stringify(novoRegistro[0].temperatura) 
-                    umidadeAtual.innerHTML = JSON.stringify(novoRegistro[0].umidade) 
+                    temperaturaAtual.innerHTML = JSON.stringify(novoRegistro[0].temperatura)
+                    umidadeAtual.innerHTML = JSON.stringify(novoRegistro[0].umidade)
 
                     if (Number(temperaturaAtual.innerHTML) >= 27.3 || Number(umidadeAtual.innerHTML) >= 70) {
                         document.getElementById('section-one').classList.remove("ideal")
                         document.getElementById('section-one').classList.add("quente")
                         document.getElementById('modal_quente').style.display = "flex"
 
-                    } else if (Number(temperaturaAtual.innerHTML) <= 26.5 || Number(umidadeAtual.innerHTML) <= 60.2) {
+                    } else if (Number(temperaturaAtual.innerHTML) <= 26.3 || Number(umidadeAtual.innerHTML) <= 60.2) {
                         document.getElementById('section-one').classList.remove("ideal")
                         document.getElementById('section-one').classList.add("frio")
                         document.getElementById('modal_frio').style.display = "flex"
@@ -643,7 +665,9 @@
 
 
     id_usuario.innerHTML = sessionStorage.ID_USUARIO
+    id_usuarioo.innerHTML = sessionStorage.ID_USUARIO
     nome_usuario.innerHTML = sessionStorage.NOME_USUARIO
+    nome_usuarioo.innerHTML = sessionStorage.NOME_USUARIO
 
 
 
