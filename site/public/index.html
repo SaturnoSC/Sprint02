@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./css/style1.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" href="./img/AAA.png">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
@@ -35,8 +38,35 @@
                 </ul>
             </div>
         </nav>
+
+
         <div class="nav">
-            
+            <div class="logo">
+                <a href="./index.html"><img src="./img/logoSite.png"></a>
+            </div>
+            <div class="continuacao">
+                <span class="material-symbols-outlined" onclick="navResponsiva()">
+                    menu
+                </span>
+            </div>
+            <div class="conteudoo" id="conteudo-segunda-nav">
+                <div class="fechar">
+                    <span class="material-symbols-outlined" onclick="fecharnavResponsiva()">
+                        close
+                    </span>
+                </div>
+                <div class="links">
+                    <div class="partea">
+                        <a href="#sobreNos">Sobre Nós</a>
+                        <a href="#mvv2">Propósitos</a>
+                        <a href="./simulador.html">Simulador financeiro</a>
+                    </div>
+                    <div class="parteb">
+                        <a href="./login.html">Entrar</a>
+                        <a href="./cadastro.html" class="cadastro">Cadastre-se</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -51,8 +81,8 @@
                     </p>
                 </div>
                 <a href="./simulador.html"><button>
-                    Simular
-                </button></a>
+                        Simular
+                    </button></a>
             </div>
         </div>
     </section>
@@ -69,7 +99,8 @@
 
             <div class="conteudo">
                 <div class="texto">
-                    <p>Somos uma equipe de profissionais cujo objetivo consiste em mantermos constante evolução, tanto em tecnologias quanto ao desenvolvimento comportamental de cada indivíduo da equipe. 
+                    <p>Somos uma equipe de profissionais cujo objetivo consiste em mantermos constante evolução, tanto
+                        em tecnologias quanto ao desenvolvimento comportamental de cada indivíduo da equipe.
                     </p>
                 </div>
             </div>
@@ -119,11 +150,39 @@
         </div>
     </div>
 
+    <div class="container2Tablet" id="mvv2">
+        <div class="partea">
+            <div class="slot">
+                <h2>Missão</h2>
+                <p>Trazer a solução para monitorar a temperatura e umidade do seu negócio</p>
+            </div>
+            <div class="slot">
+                <h2>Visão</h2>
+                <p>Busca contínua no aperfeiçoamento tecnológico para trazer o que há de mais avançado no
+                    mercado dos sensores</p>
+            </div>
+            <div class="slot">
+                <h2>Valores</h2>
+                <ul>
+                    <li>Respeito</li>
+                    <li>Transparência</li>
+                    <li>Compromisso</li>
+                    <li>Integridade</li>
+                    <li>Ética</li>
+                    <li>Honestidade</li>
+                </ul>
+            </div>
+        </div>
+        <div class="parteb">
+            <img src="./assets/Business-mission-amico.svg">
+        </div>
+    </div>
+
 
     <!-- Rodapé -->
     <footer id="footer">
         <div class="imagem">
-           <a href="#nav_topo"> <img src="./img/logoSite.png" alt="" width="200"></a>
+            <a href="#nav_topo"> <img src="./img/logoSite.png" alt="" width="200"></a>
         </div>
 
         <div class="conteudo">
@@ -152,9 +211,13 @@
         </div>
         <div class="final">
             <p>&copy; Todos os direitos reservados 2022 Saturno SC - CNPJ: 15.130.123/0001-29</p>
-       </div>
+        </div>
     </footer>
 
 </body>
 
 </html>
+
+<script src="./js/navResponsiva.js">
+    
+</script>

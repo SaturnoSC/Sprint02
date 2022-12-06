@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./css/simulador.css">
     <link rel="icon" href="./img/AAA.png">
     <title>Saturno SC | Simulador</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
@@ -32,6 +35,34 @@
             </ul>
         </div>
     </nav>
+    <div class="nav">
+        <div class="logo">
+            <a href="./index.html"><img src="./img/logoSite.png"></a>
+        </div>
+        <div class="continuacao">
+            <span class="material-symbols-outlined" onclick="navResponsiva()">
+                menu
+            </span>
+        </div>
+        <div class="conteudoo" id="conteudo-segunda-nav">
+            <div class="fechar">
+                <span class="material-symbols-outlined" onclick="fecharnavResponsiva()">
+                    close
+                </span>
+            </div>
+            <div class="links">
+                <div class="partea">
+                    <a href="./index.html#sobreNos">Sobre Nós</a>
+                    <a href="./index.html#mvv2">Propósitos</a>
+                    <a href="./simulador.html">Simulador financeiro</a>
+                </div>
+                <div class="parteb">
+                    <a href="./login.html">Entrar</a>
+                    <a href="./cadastro.html" class="cadastro">Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section>
         <div class="geral">
@@ -58,7 +89,7 @@
     <!-- Rodapé -->
     <footer id="footer">
         <div class="imagem">
-            <a href="./index.html"> <img src="./img/logoSite.png" alt="" width="200"></a>
+            <a href="#nav_topo"> <img src="./img/logoSite.png" alt="" width="200"></a>
         </div>
 
         <div class="conteudo">
@@ -77,6 +108,10 @@
                 <h3>Simulador financeiro</h3>
                 <a href="./simulador.html">Faça agora mesmo uma simulação conosco</a>
             </div>
+            <div class="links4">
+                <h3>Suporte</h3>
+                <a href="https://saturnosc.auvo.com.br/login#signin" target="_blank">Abrir chamado</a>
+            </div>
             <div class="qrCode">
                 <img src="./img/logodoQRcode.png" alt="Código QR para entra em contato conosco" width="130vh">
             </div>
@@ -88,7 +123,7 @@
 </body>
 
 </html>
-
+<script src="./js/navResponsiva.js"></script>
 <script>
 
     function analise() {
