@@ -27,13 +27,16 @@
         </span>
     </div>
 
-    <div class="navTablet">
+    <div class="navTablet" id="nav-tablet">
+        <div class="fechar">
+            <span class="material-symbols-outlined" onclick="fecharmenuTablet()">close</span>
+        </div>
         <div class="nome">
             <p>Olá, <span id="nome_usuario"></span></p>
             <p>ID: <span id="id_usuario"></span></p>
         </div>
         <div class="link">
-            <a onclick="analytics()" id="botao-2"><span class="material-symbols-outlined"> home</span>Início <span>&ensp;</span></a>
+            <a onclick="analytics()" id="botao-2"><span class="material-symbols-outlined"> home</span>Início <span></span></a>
         </div>
     </div>
 
@@ -57,8 +60,11 @@
                 <a id="botao-1" class="aqui" onclick="dashboard()"><span class="material-symbols-outlined">
                         monitoring
                     </span>Gráficos <span>&ensp;</span></a>
-
             </div>
+            
+        </div>
+        <div class="saida">
+            <a href="./manual/manual_de_instalacao.pdf" target="_blank">Manual de Instalação</a>
         </div>
     </nav>
 
@@ -189,7 +195,10 @@
 
 <script>
     function menuTablet() {
-
+        document.getElementById('nav-tablet').style.top = "0"
+    }
+    function fecharmenuTablet() {
+        document.getElementById('nav-tablet').style.top = "-50vh"
     }
 </script>
 
@@ -249,13 +258,13 @@
         labels: labels2,
         datasets: [{
             label: 'Temperatura Média',
-            backgroundColor: 'white',
+            backgroundColor: '#e6bc16',
             borderColor: 'black',
             data: [19.41, 19.63, 19.27, 19.81, 20, 19.54, 19.45, 19.36, 19, 27],
         },
         {
             label: 'Umidade Média',
-            backgroundColor: '#e6bc16',
+            backgroundColor: 'white',
             borderColor: 'black',
             data: [47, 46, 47, 44, 45, 49, 48, 48, 47],
         }]
@@ -659,6 +668,7 @@
 
     }
 </script>
+
 
 <script>
 

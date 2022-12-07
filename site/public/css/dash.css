@@ -7,6 +7,7 @@
 * {
     margin: 0;
     padding: 0;
+    transition: all 1s;
 }
 
 body {
@@ -116,8 +117,9 @@ nav .bar .botoes {
     height: 200px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
+
 }
 
 nav .bar .botoes a {
@@ -144,7 +146,7 @@ nav .bar .botoes .aqui {
 
 nav .saida {
     width: 100%;
-    height: 70px;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -159,7 +161,8 @@ nav .saida a {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 1em;
+    font-family: 'Ubuntu';
 }
 
 nav .saida a:hover {
@@ -718,23 +721,80 @@ section .contPrincipal .cont1, section .contPrincipal .cont2 {
 }
 
 .navTablet {
-    width: 30%;
+    width: 25%;
     height: 40vh;
     position: absolute;
-    background-color: #fff;
-    display: flex;
+    top: -50vh;
+    left: 0px;
+    z-index: 30000;
+    background-color: #123142;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-right: 2px solid #e6bc16;
+    border-bottom: 2px solid #e6bc16;
+    border-radius: 0 0 8px 0;
+}
+.navTablet .fechar{
+    width: 90%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navTablet .fechar span{
+    font-size: 1.5em;
+    color: #e6bc16;
 }
 
+
+.navTablet .nome{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navTablet .link{
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navTablet .link a{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #e6bc16;
+    font-family: 'Ubuntu';
+}
+
+.navTablet .nome p{
+    color: #f5f5f5;
+    font-family: 'Ubuntu';
+    font-size: 1.3em;
+}
+
+.navTablet .nome p span{
+    font-weight: 800;
+}
 
 @media only screen and (max-width: 1060px) {
     .teste{
         display: none;
     }
-    .menTu{
+    .menTu, .navTablet{
         display: flex;
+    }
+
+    nav .saida{
+        display: none;
     }
 
 
@@ -773,4 +833,14 @@ section .contPrincipal .cont1, section .contPrincipal .cont2 {
         height: 40vh !important;
     }
 
+}
+
+
+@media only screen and (max-width: 800px){
+    section .container1 .conteudo .analitics{
+        display: none;
+    }
+    .menTu span{
+        font-size: 2.5em;
+    }
 }
